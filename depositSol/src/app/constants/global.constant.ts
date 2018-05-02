@@ -2,7 +2,8 @@ import {CommonService} from '../services/common.service';
 
 export const backendURL = {
   'issues': 'https://api.github.com/repos/angular/angular.js/issues',
-  'repository': 'https://api.github.com/repos/angular/angular.js'
+  'repository': 'https://api.github.com/repos/angular/angular.js',
+  'star': 'https://api.github.com/user/starred/angular/angular.js'
 };
 
 export const appHeaders = {

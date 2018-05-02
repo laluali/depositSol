@@ -1,0 +1,39 @@
+@import '../../content/content.component.css';
+.repo-d-icon-checked{
+  height: 15px;
+  width: 15px;
+}
+
+.repo-container{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.repo-d-icon{
+  height: 15px;
+  width: 15px;
+  -webkit-filter: invert(1);
+  filter: invert(1);
+  margin-bottom: 5px;
+}
+
+.repo-d-icon-checked{
+  height: 15px;
+  width: 15px;
+  margin-bottom: 5px;
+}
+
+.repo-d-icon-bg{
+  height: auto;
+  width: auto;
+  padding: unset;
+}
+
+.repo-d-icon-bg:hover{
+  background-color: lightskyblue;
+}
+
+.noPad{
+  padding: unset;
+  padding-left: 3px;
+}

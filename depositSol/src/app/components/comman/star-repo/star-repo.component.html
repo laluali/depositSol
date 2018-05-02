@@ -1,0 +1,14 @@
+<div class="input-group">
+  <div class="input-group-prepend">
+    <div class="input-group-text repo-d-icon-bg" id="btnGroupAddon">
+      <button [disabled]="isDisabled" (click)="toggleStar(isStar)" style="background-color:transparent; border-color:transparent;">
+        <img [class]="isStar?'repo-d-icon-checked':'repo-d-icon'" src="https://png.icons8.com/material/50/000000/christmas-star.png">
+      </button>
+    </div>
+  </div>
+  <span class="form-control">{{starCount}}</span>
+</div>
+
+
+<!--<img [class]="isStar?'repo-d-icon-checked':'repo-d-icon'" src="https://png.icons8.com/ios/50/000000/code-fork-filled.png">
+      <img [class]="isStar?'repo-d-icon-checked':'repo-d-icon'" src="https://png.icons8.com/material/50/000000/visible.png">-->

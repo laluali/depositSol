@@ -1,3 +1,35 @@
-<p>
-  issue-card works!
-</p>
+<div class="card">
+  <div class="card-body">
+    <span *ngFor="let card of cardList">
+      <div class="d-flex flex-nowrap">
+        <div class="order-1 p-2">@</div>
+        <div class="order-2 p-2">
+          <span class="text-dark">
+            <a [href]="card.url">{{card.title}}</a>
+          </span>
+          <br/>
+          <span class="text-muted">#{{card.number}}</span>
+          <div *ngIf="card.milestone">
+              <a [href]="card.milestone.url">{{card.milestone.title}}</a>
+          </div>
+          <div *ngIf="card.user">
+              <a [href]="card.user.url">{{card.user.login}}</a>
+          </div>
+        </div>
+        <div class="order-3 p-2"><span *ngFor="let label of card.labels">
+            <a class="style-label" [href]="label.url">
+              <span [id]="label.id" [ngStyle]="{'background-color': '#'+label.color}">
+                {{label.name}}
+              </span>
+            </a>
+          </span></div>
+        <div class="order-4 p-2">
+          <span>
+            <img src="https://png.icons8.com/small/50/000000/filled-chat.png">
+            <sub>{{card.comments}}</sub>
+          </span>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>

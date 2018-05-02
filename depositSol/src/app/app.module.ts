@@ -11,6 +11,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { RepoDetailComponent } from './components/comman/repo-detail/repo-detail.component';
 import { ErrorComponent } from './components/comman/error/error.component';
 import { CommonService } from './services/common.service';
+import { WatchRepoComponent } from './components/comman/watch-repo/watch-repo.component';
+import { StarRepoComponent } from './components/comman/star-repo/star-repo.component';
+import { ForkRepoComponent } from './components/comman/fork-repo/fork-repo.component';
+import {RepoDetailService} from './components/comman/repo-detail/repo-detail.service';
+import {ContentService} from './components/content/content.service';
+import {StarRepoService} from './components/comman/star-repo/star-repo.service';
+import {IssueCardService} from './components/comman/issue-card/issue-card.service';
 
 
 @NgModule({
@@ -21,7 +28,10 @@ import { CommonService } from './services/common.service';
     ContentComponent,
     IssueCardComponent,
     RepoDetailComponent,
-    ErrorComponent
+    ErrorComponent,
+    WatchRepoComponent,
+    StarRepoComponent,
+    ForkRepoComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +39,11 @@ import { CommonService } from './services/common.service';
   ],
   providers: [
     BackendService,
-    CommonService],
+    CommonService,
+    RepoDetailService,
+    ContentService,
+    StarRepoService,
+    IssueCardService],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]
 })

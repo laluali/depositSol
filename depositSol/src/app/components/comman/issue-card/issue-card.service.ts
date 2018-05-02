@@ -1,21 +1,21 @@
 import { Injectable } from '@angular/core';
-import {Subject} from 'rxjs/Subject';
-import {RepoDetail} from './repo-detail';
-import {Observable} from 'rxjs/Observable';
 import {backendURL} from '../../../constants/global.constant';
+import {Observable} from 'rxjs/Observable';
 import {BackendService} from '../../../services/backend.service';
-import 'rxjs/add/operator/map';
-
+import {IssueCard} from './issue-card';
 @Injectable()
-export class RepoDetailService {
+export class IssueCardService {
 
   constructor(private _backendService: BackendService) { }
 
-  getRepoDetails$(backendURL: string): Observable<RepoDetail> {
+  getIssues$(backendURL: string): Observable<IssueCard[]> {
     return this._backendService.doGet(backendURL)
       .map(
-        (res: RepoDetail) => {
-          return res;
+        (res: any) =>  <IssueCard[]> res
+      )
+      .catch(
+        (error: any) => {
+          return Observable.throw(error);
         }
       );
   }

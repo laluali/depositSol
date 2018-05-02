@@ -1,7 +1,17 @@
+<div class="row repo-container">
+  <div class="col d-inline">
+    <span>
+    <img class="img-fluid repo-d-icon-checked" src="https://png.icons8.com/ultraviolet/50/000000/repository.png">
+      <span>
+        <a href="{{organization.html_url}}">{{organization.login}}</a> <span>/</span> <a href="{{repoHTMLURL}}"><b>{{repoName}}</b></a>
+        <app-ds-star-repo [starCount]="starCount" [organization]="organization" [repoName]="repoName" [repoHTMLURL]="repoHTMLURL"></app-ds-star-repo>
+      </span>
+    </span>
+  </div>
+</div>
 <p>
-  repo-detail works!
   {{subscribers}}
   {{openIssuesCount}}
-  {{starCount}}
+
   {{forkCount}}
 </p>
