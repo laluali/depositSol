@@ -1,3 +1,13 @@
 a:hover{
   text-decoration: none;
 }
+
+.comment a{
+  border-color: lightskyblue;
+  border-radius: 49px;
+  border-width: 5px;
+}
+
+body{
+  font-size: medium;
+}

@@ -8,6 +8,11 @@ a img:hover{
   border-radius: 100px;
   padding: 1px;
 }
+a img:focus {
+  border-radius: 100px;
+  -webkit-filter: invert(1);
+  filter: invert(1);
+}
 form button{
   border-bottom-left-radius: 0px;
   border-top-left-radius: 0px;

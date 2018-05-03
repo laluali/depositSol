@@ -16,20 +16,21 @@
               <a [href]="card.user.url">{{card.user.login}}</a>
           </div>
         </div>
-        <div class="order-3 p-2"><span *ngFor="let label of card.labels">
-            <a class="style-label" [href]="label.url">
-              <span [id]="label.id" [ngStyle]="{'background-color': '#'+label.color}">
-                {{label.name}}
-              </span>
+        <span class="order-3 p-2">
+          <span *ngFor="let label of card.labels">
+            <a class="row tag" [ngStyle]="{'border': '2px solid #'+label.color}">
+              <span class="tagLabel">{{label.name}}</span>
             </a>
-          </span></div>
-        <div class="order-4 p-2">
-          <span>
+          </span>
+        </span>
+        <div class="order-4 p-2 comment">
+          <a [href]="card.comments_url">
             <img src="https://png.icons8.com/small/50/000000/filled-chat.png">
             <sub>{{card.comments}}</sub>
-          </span>
+          </a>
         </div>
       </div>
+      <hr/>
     </span>
   </div>
 </div>

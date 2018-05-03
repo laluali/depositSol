@@ -18,6 +18,7 @@ import {RepoDetailService} from './components/comman/repo-detail/repo-detail.ser
 import {ContentService} from './components/content/content.service';
 import {StarRepoService} from './components/comman/star-repo/star-repo.service';
 import {IssueCardService} from './components/comman/issue-card/issue-card.service';
+import { FilterAndSortComponent } from './components/comman/filter-and-sort/filter-and-sort.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import {IssueCardService} from './components/comman/issue-card/issue-card.servic
     ErrorComponent,
     WatchRepoComponent,
     StarRepoComponent,
-    ForkRepoComponent
+    ForkRepoComponent,
+    FilterAndSortComponent
   ],
   imports: [
     BrowserModule,
