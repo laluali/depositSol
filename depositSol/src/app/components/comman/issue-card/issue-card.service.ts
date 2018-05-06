@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {EventEmitter, Injectable, Output} from '@angular/core';
 import {backendURL} from '../../../constants/global.constant';
 import {Observable} from 'rxjs/Observable';
 import {BackendService} from '../../../services/backend.service';
@@ -8,10 +8,25 @@ export class IssueCardService {
 
   constructor(private _backendService: BackendService) { }
 
-  getIssues$(backendURL: string): Observable<IssueCard[]> {
-    return this._backendService.doGet(backendURL)
+  @Output() getIssueCount = new EventEmitter<number>();
+  @Output() getIssueEvent = new EventEmitter<string>();
+
+  getIssues$(backendURL: string, params?: string): Observable<IssueCard[]> {
+    return this._backendService.doGet(backendURL, params)
       .map(
-        (res: any) =>  <IssueCard[]> res
+        (res) =>  <IssueCard[]> res
+      )
+      .catch(
+        (error: any) => {
+          return Observable.throw(error);
+        }
+      );
+  }
+
+  getAllLabels$(backendURL: string, params?: string): Observable<IssueCard[]> {
+    return this._backendService.doGet(backendURL, params)
+      .map(
+        (res) => res
       )
       .catch(
         (error: any) => {

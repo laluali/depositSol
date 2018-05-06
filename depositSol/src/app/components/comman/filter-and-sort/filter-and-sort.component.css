@@ -1,0 +1,5 @@
+@import '../../content/content.component.css';
+
+.flex-pane{
+  flex-wrap: wrap;
+}

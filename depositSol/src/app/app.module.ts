@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-// import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/compiler/src/core';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -19,6 +18,14 @@ import {ContentService} from './components/content/content.service';
 import {StarRepoService} from './components/comman/star-repo/star-repo.service';
 import {IssueCardService} from './components/comman/issue-card/issue-card.service';
 import { FilterAndSortComponent } from './components/comman/filter-and-sort/filter-and-sort.component';
+import { TagComponent } from './components/comman/tag/tag.component';
+import { CommentsComponent } from './components/comman/comments/comments.component';
+import {TagService} from './components/comman/tag/tag.service';
+import { MultiselectDropDownComponent } from './components/comman/multiselect-drop-down/multiselect-drop-down.component';
+import { FilterPipe } from './pipe/filter.pipe';
+import {FormsModule} from '@angular/forms';
+import {WatchService} from './components/comman/watch-repo/watch.service';
+import {ForkRepoService} from './components/comman/fork-repo/fork-repo.service';
 
 
 @NgModule({
@@ -33,11 +40,16 @@ import { FilterAndSortComponent } from './components/comman/filter-and-sort/filt
     WatchRepoComponent,
     StarRepoComponent,
     ForkRepoComponent,
-    FilterAndSortComponent
+    FilterAndSortComponent,
+    TagComponent,
+    CommentsComponent,
+    MultiselectDropDownComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [
     BackendService,
@@ -45,7 +57,11 @@ import { FilterAndSortComponent } from './components/comman/filter-and-sort/filt
     RepoDetailService,
     ContentService,
     StarRepoService,
-    IssueCardService],
+    IssueCardService,
+    TagService,
+    WatchService,
+    ForkRepoService
+  ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]
 })

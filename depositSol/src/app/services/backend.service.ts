@@ -9,8 +9,11 @@ export class BackendService {
 
   constructor(private http: HttpClient, private commonService: CommonService) { }
 
-  doGet(url) {
+  doGet(url, params?: string) {
     return this.http.get(url, {
+      params: {
+        'q': params ? params : null
+      },
       headers: new HttpHeaders({
         'Content-Type':  appHeaders.ContentTypeJSON,
         'Authorization':  appHeaders.Authorization + this.commonService.getBase64(userLogin())
@@ -18,8 +21,8 @@ export class BackendService {
     });
   }
 
-  doPut(url) {
-    return this.http.put(url, '', {
+  doPut(url, body?) {
+    return this.http.put(url, body ? body : '' , {
       headers: new HttpHeaders({
         'Content-Type':  appHeaders.ContentTypeJSON,
         'Authorization':  appHeaders.Authorization + this.commonService.getBase64(userLogin())

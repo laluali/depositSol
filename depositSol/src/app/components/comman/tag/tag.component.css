@@ -1,0 +1,53 @@
+@import '../../content/content.component.css';
+
+.tag{
+  font-family: "Calibri Light";
+  font-style: italic;
+  color: black;
+  font-size: small;
+  border-radius: 15px 15px 15px 15px;
+  margin: 1px;
+}
+
+
+.tag-check{
+  font-family: "Calibri Light";
+  font-style: italic;
+  color: black;
+  font-size: medium;
+  border-radius: 15px 15px 15px 15px;
+  margin: 1px;
+}
+
+.tag-check-label{
+  padding-left: 2px;
+  padding-right: 5px;
+}
+.tag-check:hover{
+  background-color: ghostwhite;
+}
+
+.tag:hover{
+  color: darkgrey;
+}
+.tagLabel {
+  padding-left: 2px;
+  padding-right: 5px;
+}
+
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+label{
+  margin-bottom: unset;
+}
+
+input[type=checkbox]{
+  display: none;
+  margin-top: 2.5px;
+}
+

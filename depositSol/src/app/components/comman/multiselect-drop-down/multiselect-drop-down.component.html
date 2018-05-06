@@ -1,0 +1,19 @@
+
+<div class="suggestions">
+  <h3>{{dropDownLabel}}</h3>
+  <input type="text" (focus)="showDropDown = true" [(ngModel)]="searchText" >
+  <ul>
+    <li *ngFor="let item of filteredList">
+      <a class="suggestions" href="javascrip:void(0);" (click)="removeSelection(item);">
+        <app-ds-tag [isLink]="false" [checkBox]="false" [tag]="item"></app-ds-tag>
+      </a>
+    </li>
+  </ul>
+  <div *ngIf="showDropDown">
+    <ul>
+      <li *ngFor="let listItem of selectList | filter : searchText">
+          <app-ds-tag [isLink]="false" [checkBox]="true" [tag]="listItem"></app-ds-tag>
+      </li>
+    </ul>
+  </div>
+</div>

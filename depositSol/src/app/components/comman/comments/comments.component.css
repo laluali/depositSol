@@ -1,0 +1,22 @@
+@import '../../content/content.component.css';
+
+.comment a{
+  border-color: lightskyblue;
+  border-radius: 49px;
+  border-width: 5px;
+}
+
+.comment img{
+  width: 25px;
+  height: 25px;
+}
+
+.comment img:hover{
+  width: 25px;
+  height: 25px;
+  padding: 1px;
+}
+
+.comment{
+  float: right;
+}

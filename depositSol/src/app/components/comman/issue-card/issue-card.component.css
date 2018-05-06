@@ -1,45 +1,5 @@
 @import '../../content/content.component.css';
 
-.comment img{
-  width: 25px;
-  height: 25px;
-}
-
-.comment img:hover{
-  width: 25px;
-  height: 25px;
-  padding: 1px;
-}
-
-
-.tag{
-  font-family: "Calibri Light";
-  font-style: italic;
-  color: black;
-  font-size: small;
-  border-radius: 15px 15px 15px 15px;
-  margin: 1px;
+.block{
   display: inline-block;
-}
-
-/*.tag:hover{
-  -webkit-animation: tagHover 5s infinite;
-  animation: tagHover 5s infinite;
-  border-radius: 15px 15px 15px 15px;
-}
-!* Chrome, Safari, Opera *!
-@-webkit-keyframes tagHover {
-  30% {outline: 4px solid ;}
-}
-!* Standard syntax *!
-@keyframes tagHover {
-  30% {outline: 4px solid;}
-}*/
-.tagLabel {
-  padding-left: 2px;
-  padding-right: 5px;
-}
-
-.comment{
-  float: right;
 }

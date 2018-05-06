@@ -1,0 +1,12 @@
+@import '../../content/content.component.css';
+
+.suggestions{
+  width: 200px;
+}
+
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}

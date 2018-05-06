@@ -2,7 +2,9 @@
   <div class="card-body">
     <span *ngFor="let card of cardList">
       <div class="d-flex flex-nowrap">
-        <div class="order-1 p-2">@</div>
+        <div class="order-1 p-2">
+          <img class="icon15" [src]="issueImage">
+        </div>
         <div class="order-2 p-2">
           <span class="text-dark">
             <a [href]="card.url">{{card.title}}</a>
@@ -17,20 +19,21 @@
           </div>
         </div>
         <span class="order-3 p-2">
-          <span *ngFor="let label of card.labels">
-            <a class="row tag" [ngStyle]="{'border': '2px solid #'+label.color}">
-              <span class="tagLabel">{{label.name}}</span>
-            </a>
-          </span>
+          <ul>
+            <li class="block" *ngFor="let tag of card.labels">
+              <app-ds-tag [isLink]="true" [checkBox]="false" [tag]="tag"></app-ds-tag>
+            </li>
+          </ul>
         </span>
-        <div class="order-4 p-2 comment">
-          <a [href]="card.comments_url">
-            <img src="https://png.icons8.com/small/50/000000/filled-chat.png">
-            <sub>{{card.comments}}</sub>
-          </a>
+        <div class="order-4 p-2">
+          <app-ds-comments [comments]="card.comments" [commentURL]="card.comments_url" [imageURL]="imageURL"></app-ds-comments>
         </div>
       </div>
       <hr/>
     </span>
   </div>
 </div>
+<div>
+  <app-ds-multiselect-drop-down [dropDownLabel]="dropDownLabel" [selectList]="labelList"></app-ds-multiselect-drop-down>
+</div>
+

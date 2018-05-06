@@ -1,9 +1,8 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {appHeaders, backendURL, userLogin} from '../../../constants/global.constant';
-import {HttpHeaders} from '@angular/common/http';
-import {BackendService} from '../../../services/backend.service';
+import {backendURL} from '../../../constants/global.constant';
 import {RepoDetail} from './repo-detail';
 import {RepoDetailService} from './repo-detail.service';
+import {IssueCardService} from '../issue-card/issue-card.service';
 
 @Component({
   selector: 'app-ds-repo-detail',
@@ -12,7 +11,8 @@ import {RepoDetailService} from './repo-detail.service';
 })
 export class RepoDetailComponent implements OnInit, RepoDetail, OnDestroy {
 
-  constructor(private _repoDetailService: RepoDetailService) { }
+  constructor(private _repoDetailService: RepoDetailService,
+              private _issueCardService: IssueCardService) { }
 
   subscribers: number;
   openIssuesCount: number;
@@ -22,14 +22,13 @@ export class RepoDetailComponent implements OnInit, RepoDetail, OnDestroy {
   repoName: string;
   repoHTMLURL: string;
   repo: any = {};
-  ngOnInit() {
 
+  ngOnInit() {
     this.repo = this._repoDetailService.getRepoDetails$(backendURL.repository).subscribe(
       success => {
         this.starCount = success['stargazers_count'];
         this.subscribers = success['subscribers_count'];
         this.forkCount = success['forks_count'];
-        this.openIssuesCount = success['open_issues_count'];
         this.organization = success['organization'];
         this.repoName = success['name'];
         this.repoHTMLURL = success['html_url'];
@@ -37,18 +36,12 @@ export class RepoDetailComponent implements OnInit, RepoDetail, OnDestroy {
         },
       error => {console.log('error', error); }
     );
-    /*this._backendService.doGet(backendURL.repository, this.headers).subscribe(
-      success => {
-        this.starCount = success['stargazers_count'];
-        this.subscribers = success['subscribers_count'];
-        this.forkCount = success['forks_count'];
-        this.openIssuesCount = success['open_issues_count'];
-        this.organization = success['organization'];
-        this.repoName = success['name'];
-        this.repoHTMLURL = success['html_url'];
-        },
-      error => console.log(error)
-    );*/
+
+    this._issueCardService.getIssueCount.subscribe(
+      count => {
+        this.openIssuesCount = count;
+      }
+    );
   }
 
   ngOnDestroy() {

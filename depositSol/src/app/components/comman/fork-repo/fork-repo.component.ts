@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnChanges, OnInit} from '@angular/core';
+import {backendURL, dsImage} from '../../../constants/global.constant';
+import {ForkRepoService} from './fork-repo.service';
 
 @Component({
   selector: 'app-ds-fork-repo',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ForkRepoComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _forkRepoService: ForkRepoService) { }
+  @Input() forkCount: number;
+  isFork: boolean;
+  isDisabled: boolean;
+  forkImg: string = dsImage.fork;
 
   ngOnInit() {
+    this.isDisabled = true;
   }
+
 
 }
