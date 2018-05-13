@@ -26,6 +26,8 @@ import { FilterPipe } from './pipe/filter.pipe';
 import {FormsModule} from '@angular/forms';
 import {WatchService} from './components/comman/watch-repo/watch.service';
 import {ForkRepoService} from './components/comman/fork-repo/fork-repo.service';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { NavLinksComponent } from './components/header/nav-links/nav-links.component';
 
 
 @NgModule({
@@ -44,10 +46,12 @@ import {ForkRepoService} from './components/comman/fork-repo/fork-repo.service';
     TagComponent,
     CommentsComponent,
     MultiselectDropDownComponent,
-    FilterPipe
+    FilterPipe,
+    NavLinksComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     HttpClientModule,
     FormsModule
   ],
