@@ -1,0 +1,8 @@
+<div class="header">
+  <form formGroup="openIssueForm">
+      <input type="text" formControlName="title"/>
+  </form>
+    {{openIssueForm.controls['title'].value}}
+  <button>Show Form Values</button>
+</div>
+<button routerLink="/editIssue">edit</button>
