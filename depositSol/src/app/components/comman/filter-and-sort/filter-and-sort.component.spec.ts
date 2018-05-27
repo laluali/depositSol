@@ -1,6 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FilterAndSortComponent } from './filter-and-sort.component';
+import {BackendService} from '../../../services/backend.service';
+import {HttpClient, HttpHandler} from '@angular/common/http';
+import {CommonService} from '../../../services/common.service';
 
 describe('FilterAndSortComponent', () => {
   let component: FilterAndSortComponent;
@@ -8,7 +11,8 @@ describe('FilterAndSortComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FilterAndSortComponent ]
+      declarations: [ FilterAndSortComponent ],
+      providers: [ BackendService, HttpClient, HttpHandler, CommonService ]
     })
     .compileComponents();
   }));
@@ -20,6 +24,6 @@ describe('FilterAndSortComponent', () => {
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(component).toBeDefined();
   });
 });

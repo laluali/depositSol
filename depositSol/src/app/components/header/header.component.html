@@ -3,7 +3,7 @@
     <a class="flex-start" href="javascrip:void(0);">
       <img [src]="headerImg" width="30" height="30" alt=" "/>
     </a>
-    <div [class]="styleNavTabs"><!--toggle-container [@openClose]="stateExpression"-->
+    <div [class]="styleNavTabs">
       <app-ds-nav-links></app-ds-nav-links>
     </div>
     <span class="flex-end">
@@ -25,8 +25,7 @@
       </button>
     </span>
   </div>
-  <div [@openClose]="stateExpression" id="navbarNavDropdown"><!--toggle-container [@openClose]="stateExpression"-->
+  <div [@openClose]="stateExpression" id="navbarNavDropdown">
     <app-ds-nav-links></app-ds-nav-links>
   </div>
 </nav>
-<!--<iframe class="toggle-container" [@openClose]="stateExpression" [src]="paneSrcURL">-->

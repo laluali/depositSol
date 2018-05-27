@@ -1,10 +1,3 @@
-<div class="input-group">
-  <div class="input-group-prepend">
-    <div class="input-group-text repo-d-icon-bg" id="btnGroupAddon">
-      <button [disabled]="isDisabled" (click)="toggleStar(isWatch)" style="background-color:transparent; border-color:transparent;">
-        <img [class]="isWatch?'repo-d-icon-checked':'repo-d-icon'" [src]="watchImg">
-      </button>
-    </div>
-  </div>
-  <span class="form-control">{{watchCount}}</span>
-</div>
+<button [disabled]="isDisabled" (click)="toggleStar(isWatch)" style="background-color:transparent; border-color:transparent;">
+  <img [alt]="watchCount + ' watching'" [title]="watchCount + ' watched'" [class]="isWatch?'repo-d-icon-checked':'repo-d-icon'" [src]="watchImg">
+</button>

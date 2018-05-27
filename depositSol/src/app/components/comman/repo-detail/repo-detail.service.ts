@@ -19,4 +19,22 @@ export class RepoDetailService {
         }
       );
   }
+
+  getOpenIssueCount$(): Observable<any> {
+    return this._backendService.doGet(backendURL.openIssues)
+      .map(
+        (res: any) => {
+          return res;
+        }
+      );
+  }
+
+  getClosedIssueCount$(): Observable<any> {
+    return this._backendService.doGet(backendURL.closedIssues)
+      .map(
+        (res: any) => {
+          return res;
+        }
+      );
+  }
 }

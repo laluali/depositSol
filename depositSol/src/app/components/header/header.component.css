@@ -121,7 +121,6 @@ li:before{
 nav {
   background-color: black;
   width: 100%;
-  font-family: "Calibri Light";
 }
 .top-nav-s-btn-img{
   -webkit-filter: invert(1);
@@ -149,6 +148,7 @@ nav {
 }
 .flex-start{
   justify-content: flex-start;
+  margin-right: 5px;
 }
 .flex-end{
   justify-content: flex-end;

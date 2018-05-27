@@ -10,8 +10,10 @@ export class IssueCardService {
 
   @Output() getIssueCount = new EventEmitter<number>();
   @Output() getIssueEvent = new EventEmitter<string>();
+  @Output() labelList = new EventEmitter<any>();
+  @Output() assigneeList = new EventEmitter<any>();
 
-  getIssues$(backendURL: string, params?: string): Observable<IssueCard[]> {
+  getIssues$( backendURL: string, params?: string): Observable<IssueCard[]> {
     return this._backendService.doGet(backendURL, params)
       .map(
         (res) =>  <IssueCard[]> res
@@ -23,7 +25,19 @@ export class IssueCardService {
       );
   }
 
-  getAllLabels$(backendURL: string, params?: string): Observable<IssueCard[]> {
+  getAllLabels$( backendURL: string, params?: string): Observable<IssueCard[]> {
+    return this._backendService.doGet(backendURL, params)
+      .map(
+        (res) => res
+      )
+      .catch(
+        (error: any) => {
+          return Observable.throw(error);
+        }
+      );
+  }
+
+  getAllAssignes$( backendURL: string, params?: string): Observable<any> {
     return this._backendService.doGet(backendURL, params)
       .map(
         (res) => res

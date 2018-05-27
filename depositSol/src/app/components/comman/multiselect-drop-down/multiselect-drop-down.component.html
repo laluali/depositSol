@@ -1,18 +1,20 @@
 
 <div class="suggestions">
   <h3>{{dropDownLabel}}</h3>
-  <input type="text" (focus)="showDropDown = true" [(ngModel)]="searchText" >
-  <ul>
-    <li *ngFor="let item of filteredList">
-      <a class="suggestions" href="javascrip:void(0);" (click)="removeSelection(item);">
-        <app-ds-tag [isLink]="false" [checkBox]="false" [tag]="item"></app-ds-tag>
-      </a>
-    </li>
-  </ul>
-  <div *ngIf="showDropDown">
+  <ul *ngIf="filteredList.length > 0" class="selected-sugg">
+  <li *ngFor="let item of filteredList">
+    <a class="suggestions" href="javascrip:void(0);" (click)="removeSelection(item);">
+      <app-ds-tag [isImage]="isImage" [calledBy]="id" [isLink]="false" [showColorBar]="showColorBar"
+                  [showBorder]="showBorder" [checkBox]="false" [tag]="item"></app-ds-tag>
+    </a>
+  </li>
+</ul>
+  <input class="sugg-input" placeholder="Search" type="text" (focus)="showDropDown = true" [(ngModel)]="searchText" >
+  <div class="suggestion-list" *ngIf="showDropDown">
     <ul>
-      <li *ngFor="let listItem of selectList | filter : searchText">
-          <app-ds-tag [isLink]="false" [checkBox]="true" [tag]="listItem"></app-ds-tag>
+      <li class="search-item" *ngFor="let listItem of selectList | filter : searchText : searchKey">
+          <app-ds-tag [calledBy]="id" [isLink]="false" [showBorder]="false" [showColorBar]="showColorBar" [checkBox]="true"
+                      [isImage]="isImage" [tag]="listItem"></app-ds-tag>
       </li>
     </ul>
   </div>

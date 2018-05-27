@@ -1,6 +1,6 @@
 import {Component, Input, OnChanges, OnInit} from '@angular/core';
 import {StarRepoService} from './star-repo.service';
-import {backendURL} from '../../../constants/global.constant';
+import {backendURL, dsImage} from '../../../constants/global.constant';
 
 @Component({
   selector: 'app-ds-star-repo',
@@ -17,17 +17,18 @@ export class StarRepoComponent implements OnInit, OnChanges {
   @Input() repoHTMLURL: string;
   isStar: boolean;
   isDisabled: boolean;
-  starIconClass: string;
+  starImg: string;
 
   ngOnInit() {
     this.isDisabled = false;
+    this.starImg = dsImage.star;
     this._starRepoService.isStar$(backendURL.star).subscribe(
       success => {this.isStar = success; },
       error => {console.log('isStarError: ', error); }// need to handle
     );
   }
   ngOnChanges() {
-    console.log('fromChanges', this.starCount);
+
   }
 
   toggleStar(isStar: boolean) {

@@ -4,36 +4,61 @@
   width: 15px;
 }
 
+button{
+  background-color:transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
 .repo-container{
   padding-top: 10px;
   padding-bottom: 10px;
+  background-color: white;
+  display: inline-flex;
+  justify-content: space-between;
+  width: 100%;
+  text-align: center;
+}
+
+.repo-grid{
+  display: inline-grid;
+  grid-template-columns: repeat(3, 25fr);
+  grid-column-gap: 5px;
+  float: right;
 }
 
 .repo-d-icon{
-  height: 15px;
-  width: 15px;
+  height: 20px;
+  width: 20px;
   -webkit-filter: invert(1);
   filter: invert(1);
-  margin-bottom: 5px;
+  cursor: pointer;
+  background-color: gray;
+  border-radius: 99px;
 }
 
 .repo-d-icon-checked{
-  height: 15px;
-  width: 15px;
-  margin-bottom: 5px;
+  height: 20px;
+  width: 20px;
+  -webkit-filter: invert(0);
+  filter: invert(0);
 }
 
-.repo-d-icon-bg{
-  height: auto;
-  width: auto;
-  padding: unset;
-}
-
-.repo-d-icon-bg:hover{
-  background-color: lightskyblue;
+.repo-breadcrum{
+  margin: 0px 1px 0px;
+  font-size: x-large;
 }
 
 .noPad{
   padding: unset;
   padding-left: 3px;
+}
+
+/*Extra small and small devices & portrait phones*/
+@media (max-width: 767.99px) {
+  .repo-breadcrum{
+    margin: 0px 1px 0px;
+    font-size: medium;
+  }
 }

@@ -21,7 +21,7 @@ export class BackendService {
     });
   }
 
-  doPut(url, body?) {
+  doPut(url: string, body?: any) {
     return this.http.put(url, body ? body : '' , {
       headers: new HttpHeaders({
         'Content-Type':  appHeaders.ContentTypeJSON,
@@ -30,8 +30,17 @@ export class BackendService {
     });
   }
 
-  doDelete(url) {
+  doDelete(url: string) {
     return this.http.delete(url, {
+      headers: new HttpHeaders({
+        'Content-Type':  appHeaders.ContentTypeJSON,
+        'Authorization':  appHeaders.Authorization + this.commonService.getBase64(userLogin())
+      })
+    });
+  }
+
+  doPatch(url: string, body?) {
+    return this.http.patch(url, body? body: '',{
       headers: new HttpHeaders({
         'Content-Type':  appHeaders.ContentTypeJSON,
         'Authorization':  appHeaders.Authorization + this.commonService.getBase64(userLogin())

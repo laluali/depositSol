@@ -1,5 +1,95 @@
 @import '../../content/content.component.css';
 
-.block{
+.card{
+  padding: 5px;
+}
+
+.fit-content{
+  width: fit-content;
+}
+
+.vertical-centre{
+  vertical-align: middle;
+}
+
+.card-wrapper{
+  border: 2px solid #e7e7e7;
+  border-radius: 5px;
+}
+
+.open-issue-btn{
+  outline: none;
+  border-radius: 5px;
+  border: #91f135 2px solid;
+  background-color: #c0fcaa;
+  height: 40px;
+  width: 80px;
+}
+
+.issue-count{
+
+}
+
+.card-header{
+  background-color: #e7e7e7;
+  min-height: 40px;
+  display: inline-flex;
+}
+
+.card-body{
+  display: inline-grid;
+  grid-auto-rows: 80% 50%;
+  width: 100%;
+  padding: 5px;
+}
+.card-body:hover{
+  background-color: #f5faff;
+}
+
+.flex:last-child{
+  display: inline-flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.flex{
+  display: inline-flex;
+  width: 100%;
+  justify-content: space-between;
+  border-bottom: 2px solid #e7e7e7;
+}
+
+.flex-start{
+  justify-content: flex-start;
+}
+.flex-end{
+  justify-content: flex-end;
+}
+
+.tag-list{
+  grid-row: 2 / span 1;
+  grid-column:  1 / span 1;
+}
+
+.tag-list > li{
   display: inline-block;
+  text-align: center;
+}
+
+.flex .sec1{
+  display: inline-block;
+}
+
+.row1{
+  padding: 5px 0;
+}
+
+.row2{
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+}
+
+.row3{
+  padding: 0 10px;
 }

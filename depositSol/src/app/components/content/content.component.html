@@ -1,11 +1,31 @@
-<div class="row">
-  <div class="col">
-    <div class="row">
-      <app-ds-repo-detail></app-ds-repo-detail>
+<div class="grid-container">
+  <div class="sec1">
+    <app-ds-repo-detail></app-ds-repo-detail>
+  </div>
+  <div class="sec2">
+    <div [@openClose]="filterStateExpression" [class]="col1">
+      <div [class]="modalContent">
+        <a href="javascrip:void(0);"(click)="showFilterPane(filterStateExpression);" class="close">&times;</a>
+        <app-ds-multiselect-drop-down [searchKey]="labelSearchKey" [id]="labelId" [dropDownLabel]="filterLabel"
+                                      [showBorder]="true" [selectList]="labelList" [showColorBar]="true"></app-ds-multiselect-drop-down>
+        <app-ds-multiselect-drop-down [searchKey]="assigneeSearchKey" [id]="assigneeId" [dropDownLabel]="filterAssignee"
+                                      [selectList]="assigneList" [showBorder]="false" [showColorBar]="false" [isImage]="true"></app-ds-multiselect-drop-down>
+      </div>
     </div>
-    <div class="row">
+    <div class="col2">
       <app-ds-issue-card></app-ds-issue-card>
     </div>
+    <div [@openClose]="sortStateExpression" [class]="col3" >
+      <div [class]="modalContent">
+        <a href="javascrip:void(0);" (click)="showSortPane(sortStateExpression);" class="close">&times;</a>
+        <app-ds-multiselect-drop-down [searchKey]="sortSearchKey" [id]="sortId" [dropDownLabel]="filterSort" [filterMultiple]="false"
+                                      [selectList]="sortList" [showBorder]="false" [showColorBar]="false" [isImage]="true"></app-ds-multiselect-drop-down>
+      </div>
+    </div>
   </div>
+  <div class="sec3"></div>
 </div>
-
+<div class="flex-pane">
+  <button class="f-btn" (click)="showFilterPane(filterStateExpression);">Filter</button>
+  <button class="s-btn" (click)="showSortPane(sortStateExpression);">Sort</button>
+</div>

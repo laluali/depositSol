@@ -1,15 +1,19 @@
 <div>
   <span *ngIf="checkBox">
     <a [href]="isLink?tagURL:'javascript:void(0)'" class="row tag-check"
-       [ngStyle]="{'border': '1px solid #' + tagColor, 'border-left-width': isChecked ? '15px' : ''}">
+       [ngStyle]="{'border-left': '11px solid #' + tagColor}">
       <label class="tag-check-label">
+        <img *ngIf="isImage" class="vertical-centre icon15" [src]="imageURL"/>
         <input (change)="addRemoveTag(tag, $event);"  [attr.checked]="isChecked ? 'checked' : null" [name]="tagName"
-               type="checkbox" value="tagName">{{tagName}}
+               type="checkbox" value="tagName">
+        <span class="tagLabel">{{tagName}}</span>
       </label>
     </a>
   </span>
   <span *ngIf="!checkBox">
-    <a [href]="isLink?tagURL:'javascript:void(0)'" class="row tag" [ngStyle]="{'border': '1px solid #' + this.tagColor, 'border-left-width': '15px'}">
+    <a [href]="isLink?tagURL:'javascript:void(0)'" class="row tag"
+       [ngStyle]="{'border': '1px solid #' + this.tagColor, 'border-left-width': '11px'}">
+      <img *ngIf="isImage" class="vertical-centre icon15" [src]="imageURL">
       <span class="tagLabel">{{tagName}}</span>
     </a>
   </span>

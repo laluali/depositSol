@@ -19,4 +19,9 @@
 
 .comment{
   float: right;
+  display: inline-block;
+}
+
+.vertical-centre{
+  vertical-align: middle;
 }

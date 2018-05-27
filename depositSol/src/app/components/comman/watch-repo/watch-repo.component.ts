@@ -24,7 +24,7 @@ export class WatchRepoComponent implements OnInit, OnChanges {
     );
   }
   ngOnChanges() {
-    console.log('fromChanges', this.watchCount);
+
   }
 
   toggleStar(isWatch: boolean) {

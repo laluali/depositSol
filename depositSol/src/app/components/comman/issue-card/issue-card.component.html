@@ -1,39 +1,43 @@
 <div class="card">
-  <div class="card-body">
-    <span *ngFor="let card of cardList">
-      <div class="d-flex flex-nowrap">
-        <div class="order-1 p-2">
-          <img class="icon15" [src]="issueImage">
+  <div class="card-wrapper">
+    <div class="card-header">
+      <button class="open-issue-btn" routerLink="/openIssue" (click)="createIssue();"> New Issue </button>
+      <span class="issue-count">
+        Issues : {{openIssuesCount}}
+      </span>
+    </div>
+    <div *ngFor="let card of cardList; let last = last" class="flex">
+      <div class="card-body">
+        <div class="row1">
+          <div class="sec1">
+            <a class="sec1-wrapper" class="card-title" [href]="card.html_url">{{card.title}}</a>
+          </div>
         </div>
-        <div class="order-2 p-2">
-          <span class="text-dark">
-            <a [href]="card.url">{{card.title}}</a>
+        <div class="row2">
+          <div class="sec-1">
+            <span *ngIf="card.user">
+              <span *ngIf="card.user.html_url">
+                <img  class="vertical-centre avatar" [src]="card.user.avatar_url"/>
+                <a [href]="card.user.html_url">{{card.user.login}}</a>
+                <span class="text-muted">#{{card.number}}</span>
+                <app-ds-comments [comments]="card.comments" [commentURL]="card.comments_url" [imageURL]="imageURL"></app-ds-comments>
+                <span *ngIf="card.milestone">
+                  <a [href]="card.milestone.html_url">{{card.milestone.title}}</a>
+                </span>
+              </span>
           </span>
-          <br/>
-          <span class="text-muted">#{{card.number}}</span>
-          <div *ngIf="card.milestone">
-              <a [href]="card.milestone.url">{{card.milestone.title}}</a>
-          </div>
-          <div *ngIf="card.user">
-              <a [href]="card.user.url">{{card.user.login}}</a>
           </div>
         </div>
-        <span class="order-3 p-2">
-          <ul>
-            <li class="block" *ngFor="let tag of card.labels">
+        <div class="row3">
+          <ul class="tag-list">
+            <li class="fit-content" *ngFor="let tag of card.labels">
               <app-ds-tag [isLink]="true" [checkBox]="false" [tag]="tag"></app-ds-tag>
             </li>
           </ul>
-        </span>
-        <div class="order-4 p-2">
-          <app-ds-comments [comments]="card.comments" [commentURL]="card.comments_url" [imageURL]="imageURL"></app-ds-comments>
         </div>
       </div>
-      <hr/>
-    </span>
+    </div>
   </div>
 </div>
-<div>
-  <app-ds-multiselect-drop-down [dropDownLabel]="dropDownLabel" [selectList]="labelList"></app-ds-multiselect-drop-down>
-</div>
+
 

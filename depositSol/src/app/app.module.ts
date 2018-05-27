@@ -28,7 +28,14 @@ import {WatchService} from './components/comman/watch-repo/watch.service';
 import {ForkRepoService} from './components/comman/fork-repo/fork-repo.service';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NavLinksComponent } from './components/header/nav-links/nav-links.component';
-
+import { ModalComponent } from './components/comman/modal/modal.component';
+import {PersistenceModule} from 'angular-persistence';
+import { LoaderComponent } from './components/comman/loader/loader.component';
+import {AppService} from './app.service';
+import {RouterModule} from '@angular/router';
+import {appRoutes} from './app.routes';
+import {RouteComponentsModule} from './components/route/route.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -47,15 +54,22 @@ import { NavLinksComponent } from './components/header/nav-links/nav-links.compo
     CommentsComponent,
     MultiselectDropDownComponent,
     FilterPipe,
-    NavLinksComponent
+    NavLinksComponent,
+    ModalComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    PersistenceModule,
+    ReactiveFormsModule,
+    RouteComponentsModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [
+    AppService,
     BackendService,
     CommonService,
     RepoDetailService,

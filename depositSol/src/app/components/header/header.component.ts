@@ -13,7 +13,7 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
       state('expanded', style({height: '*', width: '100%'})),
       transition(
         'collapsed => expanded', [
-          animate('300ms ease-in', style({  opacity: 1}))
+          animate('300ms ease-in', style({opacity: 1}))
         ]
       ),
       transition(

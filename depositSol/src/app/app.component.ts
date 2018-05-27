@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {AppService} from './app.service';
 
 @Component({
   selector: 'app-ds-root',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Desposit Solutions';
+  scrollBody: string;
+  constructor(private _appService: AppService) {
+    this._appService.scrollBody.subscribe(
+      result => {
+        result ? (this.scrollBody = 'modal-open') : (this.scrollBody = '');
+      }
+    );
+  }
 }

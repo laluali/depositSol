@@ -1,5 +1,18 @@
 @import '../../content/content.component.css';
 
 .flex-pane{
-  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 20px;
+  background-color: white;
+  border: 2px solid lightgray;
+  border-radius: 5px;
+  position: fixed;
+  z-index: 1;
+  bottom: 0;
+}
+
+.f-btn, .s-btn{
+  width: 50%;
 }
