@@ -62,21 +62,9 @@ export class MultiselectDropDownComponent implements OnInit {
       this._persistenceService.get('assigneeFList').forEach(
         assignee => {
           this.assigneeParam += '+assignee:"' + assignee.login + '"';
-          /*if ( REPO.toString() === 'angular/angular.js') {
-            this.labelParam += '+label:"' + item.name + '"';
-          } else {
-            this.labelParam = 'repo:' + REPO + item.name.toString();
-          }*/
         }
       );
     }
-
-    /*if ( REPO.toString() === 'angular/angular.js') {
-      this.assigneeParam += '+assignee:"' + assignee.login + '"';
-    } else {
-      this.assigneeParam = 'repo:' + REPO + assignee.login.toString();
-    }*/
-
     return this.assigneeParam;
   }
 
@@ -86,11 +74,6 @@ export class MultiselectDropDownComponent implements OnInit {
       this._persistenceService.get('labelFList').forEach(
         label => {
           this.labelParam += '+label:"' + label.name + '"';
-          /*if ( REPO.toString() === 'angular/angular.js') {
-            this.labelParam += '+label:"' + item.name + '"';
-          } else {
-            this.labelParam = 'repo:' + REPO + item.name.toString();
-          }*/
         }
       );
     }
@@ -106,11 +89,6 @@ export class MultiselectDropDownComponent implements OnInit {
         }
       );
     }
-    /*if ( REPO.toString() === 'angular/angular.js') {
-      this.sortParam += '+assignee:"' + item.value + '"';
-    } else {
-      this.sortParam = 'repo:' + REPO + item.value.toString();
-    }*/
     return this.sortParam;
   }
 
@@ -148,5 +126,4 @@ export class MultiselectDropDownComponent implements OnInit {
     this.selectList.splice(item.selectionIndex, 0, item);
     this.triggerIssue(item);
   }
-
 }
