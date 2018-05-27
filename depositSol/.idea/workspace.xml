@@ -1,7 +1,307 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoTestManager">
+    <enabled-run-configurations>
+      <run-configuration type="JavaScriptTestRunnerKarma" name="FilterAndSortComponent" />
+    </enabled-run-configurations>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="61fa1715-4d95-46f9-97df-2a1f2a004e5a" name="Default" comment="" />
+    <list default="true" id="61fa1715-4d95-46f9-97df-2a1f2a004e5a" name="Default" comment="Issues page &amp; routing implimentation">
+      <change afterPath="$PROJECT_DIR$/assets/gif/octocat.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/base.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/block-navigation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/lcov.info" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/prettify.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/prettify.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/sort-arrow-sprite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/sorter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/src/app/app.component.ts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/src/app/components/comman/comments/comments.component.ts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/src/app/components/comman/comments/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/src/app/components/comman/error/error.component.ts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/src/app/components/comman/error/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/src/app/components/comman/filter-and-sort/filter-and-sort.component.ts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/src/app/components/comman/filter-and-sort/filter-and-sort.service.ts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/src/app/components/comman/filter-and-sort/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/src/app/components/comman/fork-repo/fork-repo.component.ts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/src/app/components/comman/fork-repo/fork-repo.service.ts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/src/app/components/comman/fork-repo/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/src/app/components/comman/issue-card/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/src/app/components/comman/issue-card/issue-card.component.ts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/src/app/components/comman/issue-card/issue-card.service.ts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/src/app/components/comman/modal/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/src/app/components/comman/modal/modal.component.ts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/src/app/components/comman/multiselect-drop-down/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/src/app/components/comman/multiselect-drop-down/multiselect-drop-down.component.ts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/src/app/components/comman/repo-detail/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/src/app/components/comman/repo-detail/repo-detail.component.ts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/src/app/components/comman/repo-detail/repo-detail.service.ts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/src/app/components/comman/star-repo/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/src/app/components/comman/star-repo/star-repo.component.ts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/src/app/components/comman/star-repo/star-repo.service.ts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/src/app/components/comman/tag/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/src/app/components/comman/tag/tag.component.ts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/src/app/components/comman/tag/tag.service.ts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/src/app/components/comman/watch-repo/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/src/app/components/comman/watch-repo/watch-repo.component.ts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/src/app/components/comman/watch-repo/watch.service.ts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/src/app/components/content/content.component.ts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/src/app/components/content/content.service.ts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/src/app/components/content/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/src/app/components/footer/footer.component.ts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/src/app/components/footer/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/src/app/components/header/header.component.ts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/src/app/components/header/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/src/app/components/header/nav-links/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/src/app/components/header/nav-links/nav-links.component.ts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/src/app/constants/global.constant.ts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/src/app/constants/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/src/app/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/src/app/pipe/filter.pipe.ts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/src/app/pipe/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/src/app/services/backend.service.ts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/src/app/services/common.service.ts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/src/app/services/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/src/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/src/polyfills.ts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/src/test.ts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/bundles/angular-persistence.umd.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/bundles/angular-persistence.umd.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/index.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/index.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/index.metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/abstracts/persistence.cache.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/abstracts/persistence.cache.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/abstracts/persistence.cache.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/abstracts/persistence.cached_service.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/abstracts/persistence.cached_service.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/abstracts/persistence.cached_service.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/abstracts/persistence.cached_service.metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/abstracts/persistence.container.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/abstracts/persistence.container.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/abstracts/persistence.container.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/angular-persistence.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/angular-persistence.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/angular-persistence.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/angular-persistence.metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/constants/persistence.storage_type.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/constants/persistence.storage_type.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/constants/persistence.storage_type.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/constants/persistence.storage_type.metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/modules/persistence.module.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/modules/persistence.module.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/modules/persistence.module.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/modules/persistence.module.metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/services/persistence.cache-impl.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/services/persistence.cache-impl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/services/persistence.cache-impl.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/services/persistence.cache-impl.metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/services/persistence.service.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/services/persistence.service.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/services/persistence.service.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/services/persistence.service.metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/services/storage/storage.abstract_browser.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/services/storage/storage.abstract_browser.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/services/storage/storage.abstract_browser.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/services/storage/storage.abstract_browser.metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/services/storage/storage.browser_container.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/services/storage/storage.browser_container.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/services/storage/storage.browser_container.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/services/storage/storage.browser_container.metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/services/storage/storage.container_info.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/services/storage/storage.container_info.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/services/storage/storage.container_info.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/services/storage/storage.container_info.metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/services/storage/storage.factory.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/services/storage/storage.factory.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/services/storage/storage.factory.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/services/storage/storage.factory.metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/services/storage/storage.immutable_memory.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/services/storage/storage.immutable_memory.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/services/storage/storage.immutable_memory.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/services/storage/storage.immutable_memory.metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/services/storage/storage.interface.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/services/storage/storage.interface.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/services/storage/storage.interface.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/services/storage/storage.local.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/services/storage/storage.local.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/services/storage/storage.local.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/services/storage/storage.local.metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/services/storage/storage.memory.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/services/storage/storage.memory.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/services/storage/storage.memory.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/services/storage/storage.memory.metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/services/storage/storage.session.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/services/storage/storage.session.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/services/storage/storage.session.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/services/storage/storage.session.metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/services/storage/storage.sub_storage.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/services/storage/storage.sub_storage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/services/storage/storage.sub_storage.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/services/storage/storage.sub_storage.metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/types/persistence.cache_config.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/types/persistence.cache_config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/types/persistence.cache_config.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/types/persistence.config.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/types/persistence.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/types/persistence.config.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/types/persistence.expirable.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/types/persistence.expirable.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/types/persistence.expirable.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/types/persistence.item_definition.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/types/persistence.item_definition.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/types/persistence.item_definition.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/types/persistence.storable.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/types/persistence.storable.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/angular-persistence/src/types/persistence.storable.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap-grid.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap-grid.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap-grid.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap-grid.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap-reboot.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap-reboot.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap-reboot.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap-reboot.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/js/bootstrap.bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/js/bootstrap.bundle.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/js/bootstrap.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/js/bootstrap.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/alert.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/alert.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/button.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/button.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/carousel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/carousel.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/collapse.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/collapse.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/dropdown.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/dropdown.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/index.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/modal.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/modal.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/popover.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/popover.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/scrollspy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/scrollspy.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/tab.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/tab.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/tooltip.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/tooltip.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/util.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/util.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/src/alert.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/src/button.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/src/carousel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/src/collapse.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/src/dropdown.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/src/modal.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/src/popover.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/src/scrollspy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/src/tab.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/src/tooltip.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/src/util.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_alert.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_badge.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_breadcrumb.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_button-group.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_buttons.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_card.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_carousel.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_close.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_code.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_custom-forms.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_dropdown.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_forms.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_functions.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_grid.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_images.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_input-group.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_jumbotron.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_list-group.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_media.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_mixins.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_modal.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_nav.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_navbar.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_pagination.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_popover.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_print.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_progress.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_reboot.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_root.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_tables.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_tooltip.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_transitions.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_type.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_utilities.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_variables.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/bootstrap-grid.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/bootstrap-reboot.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/bootstrap.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_alert.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_background-variant.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_badge.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_border-radius.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_box-shadow.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_breakpoints.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_buttons.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_caret.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_clearfix.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_float.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_forms.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_gradients.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_grid-framework.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_grid.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_hover.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_image.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_list-group.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_lists.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_nav-divider.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_pagination.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_reset-text.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_resize.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_screen-reader.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_size.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_table-row.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_text-emphasis.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_text-hide.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_text-truncate.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_transition.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_visibility.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/utilities/_align.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/utilities/_background.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/utilities/_borders.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/utilities/_clearfix.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/utilities/_display.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/utilities/_embed.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/utilities/_flex.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/utilities/_float.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/utilities/_position.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/utilities/_screenreaders.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/utilities/_shadows.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/utilities/_sizing.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/utilities/_spacing.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/utilities/_text.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/utilities/_visibility.scss" beforeDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/dist/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -13,105 +313,38 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/depositSol$FilterPipe.dat" NAME="FilterPipe Coverage Results" MODIFIED="1526986037795" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="KarmaJavaScriptTestRunnerCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/depositSol$FilterAndSortComponent_should_create.dat" NAME="FilterAndSortComponent.should create Coverage Results" MODIFIED="1526986991859" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="KarmaJavaScriptTestRunnerCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="repo-detail.component.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/components/comman/repo-detail/repo-detail.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="23" column="65" selection-start-line="23" selection-start-column="65" selection-end-line="23" selection-end-column="65" />
-              <folding>
-                <element signature="e#0#50#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="repo-detail.component.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/components/comman/repo-detail/repo-detail.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="content.component.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/components/content/content.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="repo-detail.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/components/comman/repo-detail/repo-detail.ts">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="open-issue.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/components/route/open-issue/open-issue.component.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="51">
-              <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
+              <caret line="3" column="9" lean-forward="true" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="common.service.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/services/common.service.ts">
+      <file leaf-file-name="open-issue.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/components/route/open-issue/open-issue.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="header.component.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/components/header/header.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="2" column="32485" selection-start-line="2" selection-start-column="32485" selection-end-line="2" selection-end-column="32485" />
-              <folding>
-                <element signature="n#src#0;n#img#0;n#a#0;n#nav#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="header.component.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/app/components/header/header.component.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="header.component.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/components/header/header.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.module.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/app.module.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="12" column="18" lean-forward="true" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
-              <folding>
-                <element signature="e#0#58#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="content.component.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/components/content/content.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="81" />
+            <state>
               <folding>
                 <element signature="e#0#50#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/node_modules/angular-persistence/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -126,35 +359,105 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>MultiselectDropDownService</find>
+      <find>assigneeParam</find>
+      <find>searchString</find>
+      <find>text-dark</find>
+      <find>logo</find>
+      <find>flex-start</find>
+      <find>ContentService</find>
+      <find>btn</find>
+      <find>input</find>
+      <find>grid-colu</find>
+      <find>overflo</find>
+      <find>issu</find>
+      <find>flex-end</find>
+      <find>ngi</find>
+      <find>col1</find>
+      <find>bottom</find>
+      <find>flex</find>
+      <find>stateExpression</find>
+      <find>EventEm</find>
+      <find>close</find>
+      <find>html_ur</find>
+      <find>console.log</find>
+      <find>organization</find>
+      <find>RouteModule</find>
+      <find>OpenIssueComponent</find>
+      <find>comman</find>
+      <find>showDropDown</find>
+      <find>searchText</find>
+      <find>milestonesParam</find>
+      <find>removeImg</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>_forkRepoService</replace>
+      <replace />
+    </replaceStrings>
+    <dirStrings>
+      <dir>F:\Development\git\depositSol\depositSol</dir>
+    </dirStrings>
+  </component>
   <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/app/components/comman/navbar/navbar.component.html" />
-        <option value="$PROJECT_DIR$/src/app/components/comman/navigation/navigation.component.html" />
-        <option value="$PROJECT_DIR$/.angular-cli.json" />
-        <option value="$PROJECT_DIR$/src/app/components/header/nav-head/nav-head.component.html" />
-        <option value="$PROJECT_DIR$/src/index.html" />
-        <option value="$PROJECT_DIR$/src/app/app.component.ts" />
-        <option value="$PROJECT_DIR$/src/app/app.component.html" />
-        <option value="$PROJECT_DIR$/src/app/components/comman/issue-card/issue-card.ts" />
-        <option value="$PROJECT_DIR$/src/app/components/comman/issue-card/issue-card.component.ts" />
-        <option value="$PROJECT_DIR$/src/app/components/comman/issue-card/issue-card.component.html" />
-        <option value="$PROJECT_DIR$/src/app/services/backend.service.ts" />
-        <option value="$PROJECT_DIR$/src/app/components/content/content.component.html" />
-        <option value="$PROJECT_DIR$/src/app/components/comman/repo-detail/repo-detail.ts" />
-        <option value="$PROJECT_DIR$/src/app/components/comman/repo-detail/repo-detail.component.html" />
-        <option value="$PROJECT_DIR$/src/app/services/common-services.service.ts" />
-        <option value="$PROJECT_DIR$/src/app/constants/global.constant.ts" />
-        <option value="$PROJECT_DIR$/src/app/components/content/content.component.ts" />
-        <option value="$PROJECT_DIR$/src/app/components/comman/repo-detail/repo-detail.component.ts" />
-        <option value="$PROJECT_DIR$/src/app/app.module.ts" />
-        <option value="$PROJECT_DIR$/src/app/services/common.service.ts" />
-        <option value="$PROJECT_DIR$/src/app/components/header/header.component.ts" />
-        <option value="$PROJECT_DIR$/src/app/components/header/header.component.html" />
+        <option value="$PROJECT_DIR$/src/app/components/comman/tag/tag.component.css" />
+        <option value="$PROJECT_DIR$/src/app/pipe/filter.pipe.ts" />
+        <option value="$PROJECT_DIR$/src/app/pipe/filter.pipe.spec.ts" />
+        <option value="$PROJECT_DIR$/src/app/services/backend.service.spec.ts" />
+        <option value="$PROJECT_DIR$/src/app/components/comman/filter-and-sort/filter-and-sort.component.spec.ts" />
+        <option value="$PROJECT_DIR$/src/app/components/comman/issue-card/issue-card.service.ts" />
+        <option value="$PROJECT_DIR$/src/app/components/comman/multiselect-drop-down/multiselect-drop-down.component.html" />
+        <option value="$PROJECT_DIR$/src/app/components/comman/tag/tag.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/components/comman/tag/tag.component.html" />
+        <option value="$PROJECT_DIR$/src/app/components/comman/multiselect-drop-down/multiselect-drop-down.component.css" />
+        <option value="$PROJECT_DIR$/src/app/components/comman/multiselect-drop-down/multiselect-drop-down.service.ts" />
+        <option value="$PROJECT_DIR$/src/app/components/comman/filter-and-sort/filter-and-sort.component.css" />
+        <option value="$PROJECT_DIR$/src/app/components/comman/loader/loader.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/components/comman/loader/loader.component.css" />
+        <option value="$PROJECT_DIR$/src/app/components/comman/loader/loader.component.html" />
         <option value="$PROJECT_DIR$/src/app/components/header/header.component.css" />
+        <option value="$PROJECT_DIR$/src/app/components/header/header.component.html" />
+        <option value="$PROJECT_DIR$/src/app/components/comman/filter-and-sort/filter-and-sort.component.html" />
+        <option value="$PROJECT_DIR$/src/app/components/comman/filter-and-sort/filter-and-sort.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/components/header/header.component.ts" />
+        <option value="$PROJECT_DIR$/src/styles.css" />
+        <option value="$PROJECT_DIR$/src/app/components/comman/comments/comments.component.css" />
+        <option value="$PROJECT_DIR$/src/app/components/comman/comments/comments.component.html" />
+        <option value="$PROJECT_DIR$/src/app/components/content/content.component.css" />
+        <option value="$PROJECT_DIR$/src/index.html" />
+        <option value="$PROJECT_DIR$/src/app/app.service.ts" />
+        <option value="$PROJECT_DIR$/src/app/app.component.css" />
+        <option value="$PROJECT_DIR$/src/app/app.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/services/common.service.ts" />
+        <option value="$PROJECT_DIR$/src/app/components/comman/issue-card/issue-card.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/services/backend.service.ts" />
+        <option value="$PROJECT_DIR$/src/app/components/comman/repo-detail/repo-detail.component.css" />
+        <option value="$PROJECT_DIR$/src/app/components/comman/issue-card/issue-card.component.css" />
+        <option value="$PROJECT_DIR$/src/app/components/content/content.component.html" />
+        <option value="$PROJECT_DIR$/src/app/app.component.html" />
+        <option value="$PROJECT_DIR$/src/app/components/comman/repo-detail/repo-detail.service.ts" />
+        <option value="$PROJECT_DIR$/src/app/components/comman/repo-detail/repo-detail.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/components/comman/repo-detail/repo-detail.component.html" />
+        <option value="$PROJECT_DIR$/src/app/components/content/content.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/components/route/edit-issue/edit-issue.component.html" />
+        <option value="$PROJECT_DIR$/src/app/components/comman/issue-card/issue-card.component.html" />
+        <option value="$PROJECT_DIR$/src/app/components/route/open-issue/open-issue.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/components/route/open-issue/open-issue.component.html" />
+        <option value="$PROJECT_DIR$/src/app/components/comman/comman.module.ts" />
+        <option value="$PROJECT_DIR$/src/app/components/comman/common.module.ts" />
+        <option value="$PROJECT_DIR$/src/app/components/comman/app-common.module.ts" />
+        <option value="$PROJECT_DIR$/src/app/components/route/route.module.ts" />
+        <option value="$PROJECT_DIR$/src/app/app.routes.ts" />
+        <option value="$PROJECT_DIR$/src/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/src/app/components/comman/multiselect-drop-down/multiselect-drop-down.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/constants/global.constant.ts" />
       </list>
     </option>
   </component>
@@ -175,10 +478,9 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="10" />
-    <option name="y" value="20" />
-    <option name="width" value="1284" />
-    <option name="height" value="728" />
+    <option name="x" value="645" />
+    <option name="width" value="666" />
+    <option name="height" value="775" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -186,6 +488,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -225,15 +528,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="comman" type="462c0819:PsiDirectoryNode" />
-              <item name="repo-detail" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="depositSol" type="b2602c69:ProjectViewProjectNode" />
-              <item name="depositSol" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="content" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -242,14 +536,41 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="header" type="462c0819:PsiDirectoryNode" />
+              <item name="route" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="depositSol" type="b2602c69:ProjectViewProjectNode" />
               <item name="depositSol" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="constants" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="route" type="462c0819:PsiDirectoryNode" />
+              <item name="edit-issue" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="depositSol" type="b2602c69:ProjectViewProjectNode" />
+              <item name="depositSol" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="route" type="462c0819:PsiDirectoryNode" />
+              <item name="fall-back" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="depositSol" type="b2602c69:ProjectViewProjectNode" />
+              <item name="depositSol" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="route" type="462c0819:PsiDirectoryNode" />
+              <item name="open-issue" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="depositSol" type="b2602c69:ProjectViewProjectNode" />
+              <item name="depositSol" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="pipe" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="depositSol" type="b2602c69:ProjectViewProjectNode" />
@@ -262,18 +583,19 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="TODO_SCOPE" value="Open Files" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/AppData/Local/Programs/Git/bin/git.exe" />
     <property name="node.js.detected.package.prettier" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.prettier" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.prettier" value="" />
     <property name="node.js.selected.package.tslint" value="F:\Development\git\depositSol\depositSol\node_modules\tslint" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
     <property name="typescript-compiler-editor-notification" value="false" />
@@ -281,8 +603,13 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\Development\git\depositSol\depositSol\src\app\components" />
-      <recent name="F:\Development\git\depositSol\depositSol\src\app\components\comman\header" />
+      <recent name="F:\Development\git\depositSol\depositSol\src\app\components\route" />
       <recent name="F:\Development\git\depositSol\depositSol\src\app\components\header" />
+      <recent name="F:\Development\git\depositSol\depositSol\src\app\components\routes\route" />
+      <recent name="F:\Development\git\depositSol\depositSol\src\app\components\routes" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Development\git\depositSol\depositSol\src\app\components\comman\loader" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -307,36 +634,139 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1524998378087</updated>
-      <workItem from="1524998383002" duration="21904000" />
+      <workItem from="1524998383002" duration="22478000" />
+      <workItem from="1525110378842" duration="597000" />
+      <workItem from="1525131510951" duration="22487000" />
+      <workItem from="1525190830133" duration="25608000" />
+      <workItem from="1525372080255" duration="15195000" />
+      <workItem from="1525500244124" duration="28130000" />
+      <workItem from="1525539628273" duration="590000" />
+      <workItem from="1525543960350" duration="37901000" />
+      <workItem from="1525712486966" duration="2316000" />
+      <workItem from="1525805193369" duration="5127000" />
+      <workItem from="1525984736092" duration="595000" />
+      <workItem from="1526062358577" duration="731000" />
+      <workItem from="1526100131419" duration="1186000" />
+      <workItem from="1526102359602" duration="27013000" />
+      <workItem from="1526150105566" duration="1064000" />
+      <workItem from="1526152957842" duration="1056000" />
+      <workItem from="1526187958995" duration="37071000" />
+      <workItem from="1526234306603" duration="7128000" />
+      <workItem from="1526408391761" duration="991000" />
+      <workItem from="1526498408135" duration="1183000" />
+      <workItem from="1526519794774" duration="6026000" />
+      <workItem from="1526576172942" duration="9090000" />
+      <workItem from="1526664438193" duration="1213000" />
+      <workItem from="1526697858269" duration="22438000" />
+      <workItem from="1526739884570" duration="4485000" />
+      <workItem from="1526750941625" duration="2215000" />
+      <workItem from="1526860985700" duration="7584000" />
+      <workItem from="1526964737328" duration="4307000" />
+      <workItem from="1526985957328" duration="10100000" />
+      <workItem from="1527013054342" duration="4350000" />
+      <workItem from="1527035323489" duration="4750000" />
+      <workItem from="1527091163677" duration="14155000" />
+      <workItem from="1527207967740" duration="5908000" />
+      <workItem from="1527260079056" duration="712000" />
+      <workItem from="1527319487491" duration="18325000" />
+      <workItem from="1527352984438" duration="4025000" />
+      <workItem from="1527402931139" duration="3168000" />
+      <workItem from="1527412698278" duration="9664000" />
+      <workItem from="1527434953696" duration="2358000" />
     </task>
+    <task id="LOCAL-00001" summary="Issues page &amp; routing implimentation">
+      <created>1527435998577</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1527435998577</updated>
+    </task>
+    <task id="LOCAL-00002" summary="removing unwanted code">
+      <created>1527436430093</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1527436430093</updated>
+    </task>
+    <task id="LOCAL-00003" summary="adding route components">
+      <created>1527437206838</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1527437206839</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="FilterPipe - 2018.05.22 at 16h 17m 24s.xml">
+      <configuration name="FilterPipe" configurationId="JavaScriptTestRunnerKarma" />
+    </history-entry>
+    <history-entry file="FilterAndSortComponent - 2018.05.22 at 16h 20m 38s.xml">
+      <configuration name="FilterAndSortComponent" configurationId="JavaScriptTestRunnerKarma" />
+    </history-entry>
+    <history-entry file="FilterAndSortComponent - 2018.05.22 at 16h 28m 05s.xml">
+      <configuration name="FilterAndSortComponent" configurationId="JavaScriptTestRunnerKarma" />
+    </history-entry>
+    <history-entry file="FilterAndSortComponent - 2018.05.22 at 16h 29m 27s.xml">
+      <configuration name="FilterAndSortComponent" configurationId="JavaScriptTestRunnerKarma" />
+    </history-entry>
+    <history-entry file="FilterAndSortComponent - 2018.05.22 at 16h 30m 05s.xml">
+      <configuration name="FilterAndSortComponent" configurationId="JavaScriptTestRunnerKarma" />
+    </history-entry>
+    <history-entry file="FilterAndSortComponent - 2018.05.22 at 16h 30m 41s.xml">
+      <configuration name="FilterAndSortComponent" configurationId="JavaScriptTestRunnerKarma" />
+    </history-entry>
+    <history-entry file="FilterAndSortComponent - 2018.05.22 at 16h 31m 05s.xml">
+      <configuration name="FilterAndSortComponent" configurationId="JavaScriptTestRunnerKarma" />
+    </history-entry>
+    <history-entry file="FilterAndSortComponent - 2018.05.22 at 16h 31m 46s.xml">
+      <configuration name="FilterAndSortComponent" configurationId="JavaScriptTestRunnerKarma" />
+    </history-entry>
+    <history-entry file="FilterAndSortComponent - 2018.05.22 at 16h 32m 11s.xml">
+      <configuration name="FilterAndSortComponent" configurationId="JavaScriptTestRunnerKarma" />
+    </history-entry>
+    <history-entry file="FilterAndSortComponent_should_create - 2018.05.22 at 16h 33m 16s.xml">
+      <configuration name="FilterAndSortComponent.should create" configurationId="JavaScriptTestRunnerKarma" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21904000" />
+    <option name="totallyTimeSpent" value="373320000" />
+  </component>
+  <component name="TodoView" selected-index="2">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1320" height="784" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <layout>
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" weight="0.3288889" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info id="npm" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.3288889" />
-      <window_info anchor="bottom" id="TypeScript" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17407976" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3297546" />
+      <window_info anchor="bottom" id="Messages" weight="0.8006431" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5023401" side_tool="true" weight="0.329582" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="10" sideWeight="0.49843994" visible="true" weight="1.0" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.12730062" />
+      <window_info id="npm" order="2" side_tool="true" />
+      <window_info anchor="bottom" x="195" y="356" width="671" height="191" id="Terminal" order="9" sideWeight="0.4976599" type="FLOATING" weight="0.30981594" />
+      <window_info anchor="bottom" id="TypeScript" order="11" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49885583" visible="true" weight="0.17857143" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3288889" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Structure" order="1" sideWeight="0.5011442" side_tool="true" weight="0.18888889" />
+      <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection Results" order="12" weight="0.3297546" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" id="Coverage" order="0" side_tool="true" weight="0.30317461" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -345,218 +775,389 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Header Component" />
+    <MESSAGE value="Issues page &amp; routing implimentation" />
+    <MESSAGE value="removing unwanted code" />
+    <MESSAGE value="adding route components" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding route components" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <option name="time" value="5" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/app/components/footer/footer.component.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/components/comman/navbar/navbar.component.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/components/comman/navigation/navigation.component.html">
+    <entry file="file://$PROJECT_DIR$/src/app/components/comman/filter-and-sort/filter-and-sort.service.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="49" selection-end-line="48" />
+        <state relative-caret-position="119">
+          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tslint.json">
+    <entry file="file://$PROJECT_DIR$/src/app/components/comman/filter-and-sort/filter-and-sort.component.spec.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-17">
-          <caret line="17" column="18" lean-forward="true" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+        <state relative-caret-position="272">
+          <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/components/footer/footer.component.ts">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/src/app/components/header/header.component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="114" column="11" selection-start-line="114" selection-start-column="8" selection-end-line="114" selection-end-column="11" />
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/components/header/nav-head/nav-head.component.html">
+    <entry file="file://$PROJECT_DIR$/src/app/components/comman/loader/loader.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/components/comman/filter-and-sort/filter-and-sort.component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="17" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/components/comman/filter-and-sort/filter-and-sort.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/components/comman/comments/comments.component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="1" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/components/comman/comments/comments.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/components/header/header.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="51" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/components/comman/comments/comments.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+          <caret line="3" column="33" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.angular-cli.json">
+    <entry file="file://$PROJECT_DIR$/src/app/components/content/content.component.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+        <state relative-caret-position="-11">
+          <caret line="127" lean-forward="true" selection-start-line="127" selection-end-line="127" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.html">
+    <entry file="file://$PROJECT_DIR$/src/app/components/header/header.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="537" column="7" selection-start-line="537" selection-start-column="7" selection-end-line="537" selection-end-column="7" />
+        <state relative-caret-position="357">
+          <caret line="23" column="6" lean-forward="true" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/app.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="24" />
+        <state relative-caret-position="187">
+          <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/components/comman/issue-card/issue-card.ts">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="499">
+          <caret line="539" lean-forward="true" selection-start-line="539" selection-end-line="539" />
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/components/comman/issue-card/issue-card.component.html">
+    <entry file="file://$PROJECT_DIR$/src/app/app.component.css">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret selection-end-line="3" />
+          <caret selection-end-line="2" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/app.component.html">
+    <entry file="file://$PROJECT_DIR$/src/app/components/comman/issue-card/issue-card.component.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+        <state relative-caret-position="493">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
+    <entry file="file://$PROJECT_DIR$/src/app/components/comman/repo-detail/repo-detail.component.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-255" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/components/comman/repo-detail/repo-detail.component.spec.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#73#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/services/common-services.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+        <state relative-caret-position="190">
+          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/services/backend.service.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
+        <state relative-caret-position="469">
+          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/constants/global.constant.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/components/comman/issue-card/issue-card.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/components/content/content.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="81" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/@angular/core/src/metadata/lifecycle_hooks.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="49" column="4" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/components/content/content.component.html">
+    <entry file="file://$PROJECT_DIR$/src/app/components/comman/issue-card/issue-card.service.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
-          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/components/comman/repo-detail/repo-detail.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
+        <state relative-caret-position="17">
+          <caret line="1" column="17" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/typescript/lib/lib.dom.d.ts">
+    <entry file="file://$PROJECT_DIR$/src/app/components/comman/repo-detail/repo-detail.service.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="13133" column="10" selection-start-line="13133" selection-start-column="10" selection-end-line="13133" selection-end-column="10" />
+        <state relative-caret-position="78">
+          <caret line="11" column="58" lean-forward="true" selection-start-line="11" selection-start-column="58" selection-end-line="11" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/components/comman/issue-card/issue-card.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/components/comman/repo-detail/repo-detail.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="51" selection-start-line="51" selection-end-line="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/components/content/content.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="28" column="29" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@angular/common/src/common_module.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@angular/router/router.metadata.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret column="11295" selection-start-column="11295" selection-end-column="11295" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/components/edit-issue/edit-issue.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/components/edit-issue/edit-issue.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/components/comman/tag/tag.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/app.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/components/comman/multiselect-drop-down/multiselect-drop-down.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="2" lean-forward="true" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/components/open-issue/open-issue.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="44" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="472" selection-start-line="469" selection-start-column="27" selection-end-line="472" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/services/common.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/components/route/route.module.ts" />
+    <entry file="file://$PROJECT_DIR$/src/app/components/open-issue/open-issue.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="31" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/app.routes.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#36#75#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/app.module.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="12" column="18" lean-forward="true" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+        <state relative-caret-position="537">
+          <caret line="86" selection-start-line="86" selection-end-line="86" />
           <folding>
             <element signature="e#0#58#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/services/common.service.ts">
+    <entry file="file://$PROJECT_DIR$/src/app/components/comman/app-common.module.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+        <state relative-caret-position="452">
+          <caret line="54" column="13" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/components/comman/repo-detail/repo-detail.component.ts">
+    <entry file="file://$PROJECT_DIR$/src/app/components/comman/issue-card/issue-card.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="23" column="65" selection-start-line="23" selection-start-column="65" selection-end-line="23" selection-end-column="65" />
+        <state>
+          <caret line="3" column="97" selection-start-line="3" selection-start-column="97" selection-end-line="3" selection-end-column="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/components/content/content.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
+          <folding>
+            <element signature="e#322#329#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.angular-cli.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/components/comman/filter-and-sort/filter-and-sort.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="12" selection-start-column="12" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/components/comman/repo-detail/repo-detail.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="12" selection-start-column="12" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/components/comman/multiselect-drop-down/multiselect-drop-down.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="503">
+          <caret line="95" column="23" lean-forward="true" selection-start-line="95" selection-start-column="23" selection-end-line="95" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#66#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/constants/global.constant.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="4" column="360" selection-start-line="4" selection-start-column="360" selection-end-line="4" selection-end-column="360" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/components/route/open-issue/open-issue.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="9" lean-forward="true" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/app.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="23" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/components/route/open-issue/open-issue.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
           <folding>
             <element signature="e#0#50#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/components/comman/repo-detail/repo-detail.component.html">
+    <entry file="file://$PROJECT_DIR$/node_modules/angular-persistence/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/components/header/header.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/components/header/header.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="2" column="32485" selection-start-line="2" selection-start-column="32485" selection-end-line="2" selection-end-column="32485" />
+        <state>
           <folding>
-            <element signature="n#src#0;n#img#0;n#a#0;n#nav#0;n#!!top" expanded="true" />
+            <element signature="n#!!doc" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/components/header/header.component.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
         </state>
       </provider>
     </entry>
