@@ -1,5 +1,8 @@
 @import '../../content/content.component.css';
 
+.disable{
+  cursor: not-allowed;
+}
 
 .suggestion-list{
   height: auto;

@@ -1,17 +1,19 @@
-import {Component, Input, OnInit, Output} from '@angular/core';
+import {Component, Input, OnDestroy, OnInit, Output} from '@angular/core';
 import {IssueCard} from './issue-card';
 import {backendURL, dsImage, REPO} from '../../../constants/global.constant';
 import {IssueCardService} from './issue-card.service';
 import {TagService} from '../tag/tag.service';
+import {CommonService} from '../../../services/common.service';
 
 @Component({
   selector: 'app-ds-issue-card',
   templateUrl: './issue-card.component.html',
   styleUrls: ['./issue-card.component.css']
 })
-export class IssueCardComponent implements OnInit, IssueCard {
+export class IssueCardComponent implements OnInit, IssueCard, OnDestroy {
 
-  constructor(private _issueCardService: IssueCardService) { }
+  constructor(private _issueCardService: IssueCardService,
+              private _commonService: CommonService) { }
 
   title: string;
   labels: any;
@@ -20,16 +22,18 @@ export class IssueCardComponent implements OnInit, IssueCard {
   milestone: any;
   comments: number;
   filterList: any = [];
+  labelSearchKey = 'name';
   url: string;
   labelsUrl: string;
   tagList: any;
   imageURL: string = dsImage.comment;
   issueImage: string = dsImage.issue;
   dropDownLabel: string;
-  defaultFilter = 'repo:' + REPO + '+is:issue+is:open';
   openIssuesCount: number;
   @Input() cardList: IssueCard[];
   @Output() labelList: any = [];
+
+  private issueSubscription: any;
 
   ngOnInit() {
     this.getIssues();
@@ -49,21 +53,26 @@ export class IssueCardComponent implements OnInit, IssueCard {
       },
       error => { console.log(error); }// to be handled
     );
-    this.dropDownLabel = 'Filter Label';
-  }
-
-  getIssues(params?: string) {
-    this._issueCardService.getIssues$(backendURL.searchIssues, params ? params : this.defaultFilter).subscribe(
+    this._issueCardService.getAllMilestones$(backendURL.milestones).subscribe(
       success => {
-        this.cardList = success['items'];
-        this.openIssuesCount = success['total_count'];
-        // this._issueCardService.getIssueCount.emit(success['total_count']);
+        this._issueCardService.milestoneList.emit(success);
       },
       error => { console.log(error); }// to be handled
     );
+    this.dropDownLabel = 'Filter Label';
   }
 
-  createIssue() {
+  ngOnDestroy() {
+    this.issueSubscription.unsubscribe();
+  }
 
+  getIssues(params?: string) {
+    this.issueSubscription = this._issueCardService.getIssues$(backendURL.searchIssues, params ? params : this._commonService.getSearchString()).subscribe(
+      success => {
+        this.cardList = success['items'];
+        this.openIssuesCount = success['total_count'];
+      },
+      error => { console.log(error); }// to be handled
+    );
   }
 }

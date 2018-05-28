@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import {Subject} from 'rxjs/Subject';
 import {RepoDetail} from './repo-detail';
 import {Observable} from 'rxjs/Observable';
-import {backendURL} from '../../../constants/global.constant';
+import {backendURL, REPO} from '../../../constants/global.constant';
 import {BackendService} from '../../../services/backend.service';
 import 'rxjs/add/operator/map';
 
@@ -21,7 +21,7 @@ export class RepoDetailService {
   }
 
   getOpenIssueCount$(): Observable<any> {
-    return this._backendService.doGet(backendURL.openIssues)
+    return this._backendService.doGet(backendURL.openIssues, 'repo:' + REPO + '+is:open')
       .map(
         (res: any) => {
           return res;
@@ -30,7 +30,7 @@ export class RepoDetailService {
   }
 
   getClosedIssueCount$(): Observable<any> {
-    return this._backendService.doGet(backendURL.closedIssues)
+    return this._backendService.doGet(backendURL.closedIssues, 'repo:' + REPO + '+is:closed')
       .map(
         (res: any) => {
           return res;

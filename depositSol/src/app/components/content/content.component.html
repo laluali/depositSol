@@ -6,10 +6,12 @@
     <div [@openClose]="filterStateExpression" [class]="col1">
       <div [class]="modalContent">
         <a href="javascrip:void(0);" (click)="showFilterPane(filterStateExpression);" class="close">&times;</a>
-        <app-ds-multiselect-drop-down [searchKey]="labelSearchKey" [id]="labelId" [dropDownLabel]="filterLabel"
-                                      [showBorder]="true" [selectList]="labelList" [showColorBar]="true"></app-ds-multiselect-drop-down>
-        <app-ds-multiselect-drop-down [searchKey]="assigneeSearchKey" [id]="assigneeId" [dropDownLabel]="filterAssignee"
-                                      [selectList]="assigneList" [showBorder]="false" [showColorBar]="false" [isImage]="true"></app-ds-multiselect-drop-down>
+        <app-ds-multiselect-drop-down (getFilteredList)="filteredLabels($event);" [searchKey]="labelSearchKey" [id]="labelId" [dropDownLabel]="filterLabel"
+                                      [refreshResults]="true" [showBorder]="true" [selectList]="labelList" [showColorBar]="true"></app-ds-multiselect-drop-down>
+        <app-ds-multiselect-drop-down (getFilteredList)="filteredAssingnee($event);" [searchKey]="assigneeSearchKey" [id]="assigneeId" [dropDownLabel]="filterAssignee"
+                                      [refreshResults]="true" [selectList]="assigneeList" [showBorder]="false" [showColorBar]="false" [isImage]="true"></app-ds-multiselect-drop-down>
+        <app-ds-multiselect-drop-down (getFilteredList)="filteredMilestones($event);" [searchKey]="milestoneSearchKey" [id]="milestoneId" [dropDownLabel]="filterMilestone"
+                                      [refreshResults]="true" [selectList]="milestoneList" [showBorder]="false" [showColorBar]="false" [isImage]="true"></app-ds-multiselect-drop-down>
       </div>
     </div>
     <div class="col2">
@@ -18,8 +20,8 @@
     <div [@openClose]="sortStateExpression" [class]="col3" >
       <div [class]="modalContent">
         <a href="javascrip:void(0);" (click)="showSortPane(sortStateExpression);" class="close">&times;</a>
-        <app-ds-multiselect-drop-down [searchKey]="sortSearchKey" [id]="sortId" [dropDownLabel]="filterSort" [filterMultiple]="false"
-                                      [selectList]="sortList" [showBorder]="false" [showColorBar]="false" [isImage]="true"></app-ds-multiselect-drop-down>
+        <app-ds-multiselect-drop-down (getFilteredList)="filteredSorts($event);" [searchKey]="sortSearchKey" [id]="sortId" [dropDownLabel]="filterSort" [filterMultiple]="false"
+                                      [refreshResults]="true" [selectList]="sortList" [showBorder]="false" [showColorBar]="false" [isImage]="true"></app-ds-multiselect-drop-down>
       </div>
     </div>
   </div>

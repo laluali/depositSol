@@ -4,7 +4,7 @@
   <ul *ngIf="filteredList.length > 0" class="selected-sugg">
   <li *ngFor="let item of filteredList">
     <a class="suggestions" href="javascrip:void(0);" (click)="removeSelection(item);">
-      <app-ds-tag [isImage]="isImage" [calledBy]="id" [isLink]="false" [showColorBar]="showColorBar"
+      <app-ds-tag [isImage]="isImage" [calledBy]="id" [isLink]="false" [showColorBar]="showColorBar" [tagKey]="searchKey"
                   [showBorder]="showBorder" [checkBox]="false" [tag]="item"></app-ds-tag>
     </a>
   </li>
@@ -14,7 +14,7 @@
     <ul>
       <li class="search-item" *ngFor="let listItem of selectList | filter : searchText : searchKey">
           <app-ds-tag [calledBy]="id" [isLink]="false" [showBorder]="false" [showColorBar]="showColorBar" [checkBox]="true"
-                      [isImage]="isImage" [tag]="listItem"></app-ds-tag>
+                      [tagKey]="searchKey" [isImage]="isImage" [tag]="listItem"></app-ds-tag>
       </li>
     </ul>
   </div>

@@ -40,7 +40,16 @@ export class BackendService {
   }
 
   doPatch(url: string, body?) {
-    return this.http.patch(url, body? body: '',{
+    return this.http.patch(url, body ? body : '', {
+      headers: new HttpHeaders({
+        'Content-Type':  appHeaders.ContentTypeJSON,
+        'Authorization':  appHeaders.Authorization + this.commonService.getBase64(userLogin())
+      })
+    });
+  }
+
+  doPost(url: string, body) {
+    return this.http.post(url, body, {
       headers: new HttpHeaders({
         'Content-Type':  appHeaders.ContentTypeJSON,
         'Authorization':  appHeaders.Authorization + this.commonService.getBase64(userLogin())

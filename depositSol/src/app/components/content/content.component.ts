@@ -28,19 +28,24 @@ import {CommonService} from '../../services/common.service';
 })
 export class ContentComponent implements OnInit {
 
-  constructor(private _issueCardService: IssueCardService, private _commonService: CommonService) { }
+  constructor(private _issueCardService: IssueCardService,
+              private _commonService: CommonService) { }
 
   filterLabel: string;
   filterAssignee: string;
   filterSort: string;
+  filterMilestone: string;
   labelList: any = [];
-  assigneList: any = [];
+  assigneeList: any = [];
+  milestoneList: any = [];
   sortList: any = [];
   labelId: string;
   assigneeId: string;
   sortId: string;
+  milestoneId: string;
   labelSearchKey = 'name';
   assigneeSearchKey = 'login';
+  milestoneSearchKey = 'title';
   sortSearchKey = 'name';
   filterStateExpression: string;
   sortStateExpression: string;
@@ -48,14 +53,20 @@ export class ContentComponent implements OnInit {
   col1: string;
   col3: string;
   bodyElement: any;
+  labelParam: string;
+  sortParam: string;
+  assigneeParam: string;
+  milestonesParam: string;
 
   ngOnInit() {
     this.filterLabel = 'Filter Labels: ';
     this.filterAssignee = 'Filter Assignee: ';
     this.filterSort = 'Sort By: ';
+    this.filterMilestone = 'Filter Milestone: ';
     this.labelId = 'labelId';
     this.assigneeId = 'assigneeId';
     this.sortId = 'sortId';
+    this.milestoneId = 'milestoneId'
     this.modalContent = '';
     setTimeout( () => {
       if (screen.width >= 768) {
@@ -79,11 +90,16 @@ export class ContentComponent implements OnInit {
 
     this._issueCardService.assigneeList.subscribe(
       success => {
-        this.assigneList = success;
+        this.assigneeList = success;
       },
       error => {}
     );
-
+    this._issueCardService.milestoneList.subscribe(
+      success => {
+        this.milestoneList = success;
+      },
+      error => {}
+    );
     this.sortList.push(repoSort['interactions-asc']);
     this.sortList.push(repoSort['interactions-desc']);
     this.sortList.push(repoSort['updated-asc']);
@@ -104,5 +120,32 @@ export class ContentComponent implements OnInit {
     this.bodyElement = document.querySelector('body');
     this.bodyElement.style['overflow'] = (toggleState === 'collapsed') ? 'hidden' : '';
     this._commonService.preventBodyScroll((toggleState === 'collapsed') ? false : true);
+  }
+
+  filteredLabels(labelList) {
+    this.labelParam = this._commonService.getIssuesByLabel(labelList);
+    this.getIssues();
+  }
+
+  filteredAssingnee(assigneeList) {
+    this.assigneeParam = this._commonService.getIssuesByAssignee(assigneeList);
+    this.getIssues();
+  }
+
+  filteredSorts(sortList) {
+    this.sortParam = this._commonService.getIssuesBySortOrder(sortList);
+    this.getIssues();
+  }
+
+  filteredMilestones(milestoneList) {
+    this.milestonesParam = this._commonService.getIssuesByMilestone(milestoneList);
+    this.getIssues();
+  }
+
+  getIssues() {
+    this._issueCardService.getIssueEvent.emit(
+      this._commonService.getSearchString(
+        this.labelParam, this.sortParam, this.assigneeParam
+    ));
   }
 }

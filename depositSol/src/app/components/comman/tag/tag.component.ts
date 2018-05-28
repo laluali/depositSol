@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {TagService} from './tag.service';
+import {dsImage} from '../../../constants/global.constant';
 
 @Component({
   selector: 'app-ds-tag',
@@ -18,15 +19,18 @@ export class TagComponent implements OnInit {
   @Input() showColorBar: boolean;
   @Input() isImage: boolean;
   @Input() calledBy: string;
+  @Input() tagKey: string;
+  @Input() disable: string;
   tagURL: string;
   tagColor: string;
   tagName: string;
   isChecked: boolean;
   imageURL: string;
+  issueImage = dsImage.issue;
 
   ngOnInit() {
     this.tagColor = this.tag.color;
-    this.tagName = this.tag.name ? this.tag.name : this.tag.login;
+    this.tagName = this.tag[this.tagKey]
     this.tagURL = this.tag.url;
     if (this.isImage) {
       this.imageURL = this.tag.avatar_url;

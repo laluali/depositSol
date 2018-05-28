@@ -2,9 +2,9 @@
   <span *ngIf="checkBox">
     <a [href]="isLink?tagURL:'javascript:void(0)'" class="row tag-check"
        [ngStyle]="{'border-left': '11px solid #' + tagColor}">
-      <label class="tag-check-label">
-        <img *ngIf="isImage" class="vertical-centre icon15" [src]="imageURL"/>
-        <input (change)="addRemoveTag(tag, $event);"  [attr.checked]="isChecked ? 'checked' : null" [name]="tagName"
+      <label class="tag-check-label"><!--issueImage-->
+        <img class="vertical-centre" *ngIf="isImage" class="vertical-centre icon15" [src]="imageURL ? imageURL : issueImage"/>
+        <input (change)="addRemoveTag(tag, $event);" [attr.checked]="isChecked ? 'checked' : null" [name]="tagName"
                type="checkbox" value="tagName">
         <span class="tagLabel">{{tagName}}</span>
       </label>

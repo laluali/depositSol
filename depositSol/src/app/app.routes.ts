@@ -11,6 +11,11 @@ import {EditIssueComponent} from './components/edit-issue/edit-issue.component';
 export const appRoutes: Routes = [
   {
     path: '',
+    redirectTo: 'home',
+    pathMatch: 'full'
+  },
+  {
+    path: 'home',
     component: ContentComponent
   },
   {
@@ -18,8 +23,8 @@ export const appRoutes: Routes = [
     component: OpenIssueComponent
   },
   {
-    path: 'editIssue',
-    component: EditIssueComponent
+    path: 'openIssue/:issueId',
+    component: OpenIssueComponent
   },
   {
     path: '**',

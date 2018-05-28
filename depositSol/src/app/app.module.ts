@@ -29,7 +29,6 @@ import {ForkRepoService} from './components/comman/fork-repo/fork-repo.service';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NavLinksComponent } from './components/header/nav-links/nav-links.component';
 import { ModalComponent } from './components/comman/modal/modal.component';
-import {PersistenceModule} from 'angular-persistence';
 import { LoaderComponent } from './components/comman/loader/loader.component';
 import {AppService} from './app.service';
 import {RouterModule} from '@angular/router';
@@ -38,6 +37,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import {EditIssueComponent} from './components/edit-issue/edit-issue.component';
 import {FallBackComponent} from './components/fall-back/fall-back.component';
 import {OpenIssueComponent} from './components/open-issue/open-issue.component';
+import {OpenIssueService} from './components/open-issue/open-issue.service';
 
 @NgModule({
   declarations: [
@@ -68,7 +68,6 @@ import {OpenIssueComponent} from './components/open-issue/open-issue.component';
     BrowserAnimationsModule,
     HttpClientModule,
     FormsModule,
-    PersistenceModule,
     ReactiveFormsModule,
     RouterModule.forRoot(appRoutes)
   ],
@@ -82,7 +81,8 @@ import {OpenIssueComponent} from './components/open-issue/open-issue.component';
     IssueCardService,
     TagService,
     WatchService,
-    ForkRepoService
+    ForkRepoService,
+    OpenIssueService
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]

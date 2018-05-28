@@ -1,7 +1,7 @@
 <div class="card">
   <div class="card-wrapper">
     <div class="card-header">
-      <button class="open-issue-btn" routerLink="/openIssue" (click)="createIssue();"> New Issue </button>
+      <button class="open-issue-btn" routerLink="/openIssue"> New Issue </button>
       <span class="issue-count">
         Issues : {{openIssuesCount}}
       </span>
@@ -9,8 +9,8 @@
     <div *ngFor="let card of cardList; let last = last" class="flex">
       <div class="card-body">
         <div class="row1">
-          <div class="sec1">
-            <a class="sec1-wrapper" class="card-title" [href]="card.html_url">{{card.title}}</a>
+          <div class="sec1"><!-- [href]="card.html_url"-->
+            <a class="sec1-wrapper" class="card-title" href="javacript.void(0);" routerLink="/openIssue/{{card.number}}">{{card.title}}</a>
           </div>
         </div>
         <div class="row2">
@@ -31,7 +31,7 @@
         <div class="row3">
           <ul class="tag-list">
             <li class="fit-content" *ngFor="let tag of card.labels">
-              <app-ds-tag [isLink]="true" [checkBox]="false" [tag]="tag"></app-ds-tag>
+              <app-ds-tag [isLink]="true" [tagKey]="labelSearchKey" [checkBox]="false" [tag]="tag"></app-ds-tag>
             </li>
           </ul>
         </div>

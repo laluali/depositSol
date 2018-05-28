@@ -1,17 +1,37 @@
 <div class="header">
   <form [formGroup]="openIssueForm">
-      <input type="text" formControlName="title"/>
-      <textarea  formControlName="body"></textarea>
-      <app-ds-multiselect-drop-down >
-
-      </app-ds-multiselect-drop-down>
-      <app-ds-multiselect-drop-down (getFilteredList)="collectLists($event);" [searchKey]="labelSearchKey" [id]="labelId" [dropDownLabel]="filterLabel"
-                                    [showBorder]="true" [selectList]="labelList" [showColorBar]="true"></app-ds-multiselect-drop-down>
-      <app-ds-multiselect-drop-down (getFilteredList)="collectLists($event);" [searchKey]="assigneeSearchKey" [id]="assigneeId" [dropDownLabel]="filterAssignee"
-                                    [selectList]="assigneList" [showBorder]="false" [showColorBar]="false" [isImage]="true"></app-ds-multiselect-drop-down>
+    <div>
+      <div *ngIf="formMode == 'DISPLAY'">
+        {{openIssueForm.value['title']}} || {{openIssueForm.value['body']}}
+        <span *ngFor="let tag of labelsOnIssue">
+          <app-ds-tag [tagKey]="labelSearchKey" [showBorder]="true" [showColorBar]="true" [isImage]="false" [tag]="tag"></app-ds-tag>
+        </span>
+        <span *ngFor="let tag of assigneesOnIssue">
+          <app-ds-tag [tagKey]="assigneeSearchKey" [showBorder]="true" [showColorBar]="true" [isImage]="false" [tag]="tag"></app-ds-tag>
+        </span>
+        <span *ngFor="let tag of milestonesOnIssue">
+          <app-ds-tag [tagKey]="milestoneSearchKey" [showBorder]="true" [showColorBar]="true" [isImage]="false" [tag]="tag"></app-ds-tag>
+        </span>
+      </div>
+      <div *ngIf="formMode == 'EDIT'">
+        <input type="text" formControlName="title" [value]="openIssueForm.value['title']"/>
+        <textarea  formControlName="body" [value]="openIssueForm.value['body']"></textarea>
+        <app-ds-multiselect-drop-down (getFilteredList)="filteredLabels($event);" [searchKey]="labelSearchKey" [id]="labelId" [dropDownLabel]="filterLabel"
+                                      [filteredList]="labelsOnIssue" [refreshResults]="true" [showBorder]="true" [selectList]="labelList" [showColorBar]="true"></app-ds-multiselect-drop-down>
+        <app-ds-multiselect-drop-down *ngIf="assigneeList" (getFilteredList)="filteredAssingnee($event);" [searchKey]="assigneeSearchKey" [id]="assigneeId" [dropDownLabel]="filterAssignee"
+                                      [filteredList]="assigneesOnIssue" [refreshResults]="true" [selectList]="assigneeList" [showBorder]="false" [showColorBar]="false" [isImage]="true"></app-ds-multiselect-drop-down>
+        <app-ds-multiselect-drop-down *ngIf="milestoneList" (getFilteredList)="filteredMilestones($event);" [searchKey]="milestoneSearchKey" [id]="milestoneId" [dropDownLabel]="filterMilestone"
+                                      [filteredList]="milestonesOnIssue" [refreshResults]="true" [selectList]="milestoneList" [showBorder]="false" [showColorBar]="false" [isImage]="true"></app-ds-multiselect-drop-down>
+      </div>
+      <div *ngIf="formMode == 'CREATE'">
+        <input type="text" formControlName="title" [value]="openIssueForm.value['title']"/>
+        <textarea  formControlName="body" [value]="openIssueForm.value['body']"></textarea>
+      </div>
+    </div>
   </form>
+  <button *ngIf="formMode == 'CREATE'" [disabled]="(openIssueForm.status=='VALID' ? false : true)" (click)="submitForm();">Submit</button>
     {{openIssueForm.value | json}}
   {{openIssueForm.status | json}}
-  <button>Show Form Values</button>
 </div>
-<button routerLink="/editIssue">edit</button>
+<button (click)="changeFormMode();">edit</button>
+<button [disabled]="(openIssueForm.status=='VALID' ? false : true)" (click)="submitForm();">Submit</button>
