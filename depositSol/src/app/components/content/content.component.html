@@ -5,7 +5,7 @@
   <div class="sec2">
     <div [@openClose]="filterStateExpression" [class]="col1">
       <div [class]="modalContent">
-        <a href="javascrip:void(0);"(click)="showFilterPane(filterStateExpression);" class="close">&times;</a>
+        <a href="javascrip:void(0);" (click)="showFilterPane(filterStateExpression);" class="close">&times;</a>
         <app-ds-multiselect-drop-down [searchKey]="labelSearchKey" [id]="labelId" [dropDownLabel]="filterLabel"
                                       [showBorder]="true" [selectList]="labelList" [showColorBar]="true"></app-ds-multiselect-drop-down>
         <app-ds-multiselect-drop-down [searchKey]="assigneeSearchKey" [id]="assigneeId" [dropDownLabel]="filterAssignee"

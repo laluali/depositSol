@@ -1,4 +1,4 @@
-import {Component, Input, OnChanges, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnChanges, OnInit, Output} from '@angular/core';
 import {TagService} from '../tag/tag.service';
 import {IssueCardService} from '../issue-card/issue-card.service';
 import {backendURL, dsImage, REPO} from '../../../constants/global.constant';
@@ -23,6 +23,7 @@ export class MultiselectDropDownComponent implements OnInit {
   @Input() showColorBar: boolean;
   @Input() isImage: boolean;
   @Input() filterMultiple: boolean;
+  @Output() getFilteredList: EventEmitter<any[]> = new EventEmitter<any[]>(true);
   defaultFilter = 'repo:' + REPO + '+is:open+is:issue';
   filteredList: any = [];
   showDropDown: boolean;
@@ -52,6 +53,7 @@ export class MultiselectDropDownComponent implements OnInit {
     }
     selectedTag.selectionIndex = this.selectList.indexOf(selectedTag);
     this.filteredList.push(selectedTag);
+    this.getFilteredList.emit(this.filteredList);
     this.selectList.splice(selectedTag.selectionIndex, 1);
     this.triggerIssue(selectedTag);
   }

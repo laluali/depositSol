@@ -34,8 +34,10 @@ import { LoaderComponent } from './components/comman/loader/loader.component';
 import {AppService} from './app.service';
 import {RouterModule} from '@angular/router';
 import {appRoutes} from './app.routes';
-import {RouteComponentsModule} from './components/route/route.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import {EditIssueComponent} from './components/edit-issue/edit-issue.component';
+import {FallBackComponent} from './components/fall-back/fall-back.component';
+import {OpenIssueComponent} from './components/open-issue/open-issue.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +58,10 @@ import { ReactiveFormsModule } from '@angular/forms';
     FilterPipe,
     NavLinksComponent,
     ModalComponent,
-    LoaderComponent
+    LoaderComponent,
+    OpenIssueComponent,
+    EditIssueComponent,
+    FallBackComponent
   ],
   imports: [
     BrowserModule,
@@ -65,7 +70,6 @@ import { ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     PersistenceModule,
     ReactiveFormsModule,
-    RouteComponentsModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [

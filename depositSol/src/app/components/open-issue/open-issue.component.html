@@ -1,0 +1,17 @@
+<div class="header">
+  <form [formGroup]="openIssueForm">
+      <input type="text" formControlName="title"/>
+      <textarea  formControlName="body"></textarea>
+      <app-ds-multiselect-drop-down >
+
+      </app-ds-multiselect-drop-down>
+      <app-ds-multiselect-drop-down (getFilteredList)="collectLists($event);" [searchKey]="labelSearchKey" [id]="labelId" [dropDownLabel]="filterLabel"
+                                    [showBorder]="true" [selectList]="labelList" [showColorBar]="true"></app-ds-multiselect-drop-down>
+      <app-ds-multiselect-drop-down (getFilteredList)="collectLists($event);" [searchKey]="assigneeSearchKey" [id]="assigneeId" [dropDownLabel]="filterAssignee"
+                                    [selectList]="assigneList" [showBorder]="false" [showColorBar]="false" [isImage]="true"></app-ds-multiselect-drop-down>
+  </form>
+    {{openIssueForm.value | json}}
+  {{openIssueForm.status | json}}
+  <button>Show Form Values</button>
+</div>
+<button routerLink="/editIssue">edit</button>
