@@ -38,6 +38,7 @@ export class OpenIssueComponent implements OnInit, OnDestroy {
   filterMilestone: string;
   private labelsSubscription: any;
   private assigneeSubscription: any;
+  private milestoneSubscription: any;
   private innerValue: any = '';
   private routeSub: any;
   formMode: string;
@@ -58,13 +59,13 @@ export class OpenIssueComponent implements OnInit, OnDestroy {
       },
       error => {}
     );
-    this.labelsSubscription = this._issueCardService.getAllAssignes$(backendURL.assignees).subscribe(
+    this.assigneeSubscription = this._issueCardService.getAllAssignes$(backendURL.assignees).subscribe(
       success => {
         this.assigneeList = success;
       },
       error => {}
     );
-    this.labelsSubscription = this._issueCardService.getAllAssignes$(backendURL.milestones).subscribe(
+    this.milestoneSubscription = this._issueCardService.getAllMilestones$(backendURL.milestones).subscribe(
       success => {
         this.milestoneList = success;
       },
@@ -140,7 +141,7 @@ export class OpenIssueComponent implements OnInit, OnDestroy {
       );
       this.openIssueForm.controls['labels'].setValue(this.filteredLabelList);
       this.openIssueForm.controls['assignees'].setValue(this.filteredAssigneeList);
-      this.openIssueForm.controls['milestone'].setValue(this.filteredMilestoneList);
+      this.openIssueForm.controls['milestone'].setValue((this.filteredMilestoneList.length > 0) ? this.filteredMilestoneList : '');
       this._openIssueService.updateIssue$(this.issueId, backendURL.issues, this.openIssueForm.value).subscribe(
         success => {
           console.log(success);
@@ -154,6 +155,7 @@ export class OpenIssueComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     this.labelsSubscription.unsubscribe();
     this.assigneeSubscription.unsubscribe();
+    this.milestoneSubscription.unsubscribe();
   }
 
   getIssueDetail(issueId: number) {

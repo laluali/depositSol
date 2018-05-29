@@ -38,6 +38,10 @@ button{
   border-radius: 99px;
 }
 
+.repo-figures{
+  display: inline-table;;
+}
+
 .repo-d-icon-checked{
   height: 20px;
   width: 20px;
@@ -53,6 +57,20 @@ button{
 .noPad{
   padding: unset;
   padding-left: 3px;
+}
+
+.repo-header{
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.repo-header button{
+  background-color: #c4ffa4;
+  border: 2px solid limegreen;
+}
+
+.repo-header-left, .repo-header-right{
+  margin: 0 20px;
 }
 
 /*Extra small and small devices & portrait phones*/
