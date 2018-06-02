@@ -1,0 +1,166 @@
+@import "../../components/content/content.component.css";
+
+.form-wrapper{
+  margin: 5px;
+}
+
+.title{
+  display: inline-grid;
+  grid-column-gap: 10px;
+  grid-template-columns: 20% 80%;
+  border-radius: 5px 0 0 5px;
+  width: 100%;
+}
+
+.title-head{
+  background-color: transparent;
+  padding: 0 5px;
+  text-align: right;
+}
+.title-head:after{
+  content: ' : ';
+}
+
+.title-body{
+  padding: 0 5px;
+}
+
+
+.issue-detail-wrapper{
+  border: 2px solid #efefef;
+  border-radius: 0 5px 5px 5px;
+  padding: 10px;
+}
+
+.issue-dashboard:first-child{
+  background-color: #efefef;
+  height: fit-content;
+  font-weight: bold;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.tag-list>li{
+  display: inline-block;
+}
+
+input[type='text'], textarea{
+  border: 2px solid #efefef;
+  border-radius: 5px;
+  width: 100%;
+}
+
+input[type='text']:focus, textarea:focus{
+  outline: unset;
+}
+
+.form-element{
+  margin: 10px 0;
+}
+.form-input{
+  width: 90%;
+}
+.form-element:first-child{
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.form-element:last-child{
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+button{
+  cursor: pointer;
+  border: 2px solid;
+  outline: none;
+  color: white;
+  width: 100px;
+  height: 45px;
+  border-radius: 10px;
+  letter-spacing: 2px;
+  font-size: medium;
+}
+
+button:disabled{
+  cursor: not-allowed;
+}
+
+.form-submit:disabled{
+  background-color: #8bdbf1;
+}
+.form-submit{
+  background-color: #7db9f1;
+}
+.form-submit:hover{
+  background-color: #5fb2db;
+}
+
+.form-cancel{
+  background-color: #b3b3b3;
+}
+.form-cancel:hover{
+  background-color: #6d6d6d;
+}
+.form-cancel:focus{
+  background-color: #000000;
+}
+
+
+@media (max-width: 768px) {
+  .col1, .col3{
+    display: none;
+  }
+  .col2{
+    width: 100%;
+  }
+  .sec2{
+    display: inline-block;
+  }
+  .form-element{
+    margin: 10px 0;
+  }
+  .form-input{
+    width: 90%;
+  }
+  .form-element:first-child{
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+
+  .form-element:last-child{
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+  .title-head{
+    background-color: transparent;
+    padding: 0 5px;
+    text-align: right;
+  }
+  .grid-container{
+    display: inline-block;
+  }
+
+  .title{
+    display: inline-block;
+  }
+  .title-head{
+    height: fit-content;
+    font-weight: bold;
+    width: fit-content;
+  }
+  .title-body{
+    padding: 10px;
+  }
+
+}
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768.1px) and (max-width: 991.98px) {
+  .sec2 .col1, .sec2 .col3{
+    min-width: 150px !important;
+  }
+  .flex-pane, .close{
+    display: none;
+  }
+}

@@ -4,13 +4,6 @@
   width: 15px;
 }
 
-button{
-  background-color:transparent;
-  cursor: pointer;
-  border: none;
-  outline: none;
-}
-
 .repo-container{
   padding-top: 10px;
   padding-bottom: 10px;
@@ -23,7 +16,7 @@ button{
 
 .repo-grid{
   display: inline-grid;
-  grid-template-columns: repeat(3, 25fr);
+  grid-template-columns: repeat(4, 25fr);
   grid-column-gap: 5px;
   float: right;
 }
@@ -59,6 +52,21 @@ button{
   padding-left: 3px;
 }
 
+button{
+  background-color:transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.repo-figures{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10px;
+  background-color: #fbfbfb;
+  border-radius: 5px;
+}
 .repo-header{
   display: table-cell;
   vertical-align: middle;
@@ -66,7 +74,17 @@ button{
 
 .repo-header button{
   background-color: #c4ffa4;
+  letter-spacing: 0.5px;
   border: 2px solid limegreen;
+  width: fit-content;
+}
+
+.repo-header button:focus{
+  background-color: limegreen;
+  letter-spacing: 0.5px;
+  border: 2px solid limegreen;
+  width: fit-content;
+  color: white;
 }
 
 .repo-header-left, .repo-header-right{
@@ -74,9 +92,16 @@ button{
 }
 
 /*Extra small and small devices & portrait phones*/
-@media (max-width: 767.99px) {
+@media (max-width: 768px) {
   .repo-breadcrum{
     margin: 0px 1px 0px;
     font-size: medium;
   }
+  .repo-button{
+    display: none;
+  }
+}
+
+.vertical-centre{
+  vertical-align: middle;
 }

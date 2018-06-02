@@ -69,9 +69,11 @@ export class ContentComponent implements OnInit {
     this.milestoneId = 'milestoneId'
     this.modalContent = '';
     setTimeout( () => {
-      if (screen.width >= 768) {
+      if (screen.width > 768) {
         this.filterStateExpression = 'expanded';
         this.sortStateExpression = 'expanded';
+        this.col1 = 'col1';
+        this.col3 = 'col3';
       } else {
         this.filterStateExpression = 'collapsed';
         this.sortStateExpression = 'collapsed';

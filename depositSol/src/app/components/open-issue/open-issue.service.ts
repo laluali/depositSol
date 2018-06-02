@@ -12,8 +12,8 @@ export class OpenIssueService {
   @Output() prefillFilteredList: EventEmitter<any[]> = new EventEmitter<any[]>(true);
   @Output() prefillSelectList: EventEmitter<any[]> = new EventEmitter<any[]>(true);
 
-  postNewIssue$( backendURL: number, issueId: string, body?: string): Observable<IssueCard[]> {
-    return this._backendService.doPost(backendURL + '/' + issueId, body)
+  postNewIssue$( backendURL: string, body?: string): Observable<IssueCard[]> {
+    return this._backendService.doPost(backendURL, body)
       .map(
         (res) =>  <IssueCard[]> res
       )

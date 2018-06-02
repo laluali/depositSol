@@ -17,7 +17,6 @@ import {RepoDetailService} from './components/comman/repo-detail/repo-detail.ser
 import {ContentService} from './components/content/content.service';
 import {StarRepoService} from './components/comman/star-repo/star-repo.service';
 import {IssueCardService} from './components/comman/issue-card/issue-card.service';
-import { FilterAndSortComponent } from './components/comman/filter-and-sort/filter-and-sort.component';
 import { TagComponent } from './components/comman/tag/tag.component';
 import { CommentsComponent } from './components/comman/comments/comments.component';
 import {TagService} from './components/comman/tag/tag.service';
@@ -31,13 +30,13 @@ import { NavLinksComponent } from './components/header/nav-links/nav-links.compo
 import { ModalComponent } from './components/comman/modal/modal.component';
 import { LoaderComponent } from './components/comman/loader/loader.component';
 import {AppService} from './app.service';
-import {RouterModule} from '@angular/router';
+import {RouteReuseStrategy, RouterModule} from '@angular/router';
 import {appRoutes} from './app.routes';
 import { ReactiveFormsModule } from '@angular/forms';
-import {EditIssueComponent} from './components/edit-issue/edit-issue.component';
 import {FallBackComponent} from './components/fall-back/fall-back.component';
 import {OpenIssueComponent} from './components/open-issue/open-issue.component';
 import {OpenIssueService} from './components/open-issue/open-issue.service';
+import {CustomReuseStrategy} from './custom-reuse-strategy';
 
 @NgModule({
   declarations: [
@@ -51,7 +50,6 @@ import {OpenIssueService} from './components/open-issue/open-issue.service';
     WatchRepoComponent,
     StarRepoComponent,
     ForkRepoComponent,
-    FilterAndSortComponent,
     TagComponent,
     CommentsComponent,
     MultiselectDropDownComponent,
@@ -60,7 +58,6 @@ import {OpenIssueService} from './components/open-issue/open-issue.service';
     ModalComponent,
     LoaderComponent,
     OpenIssueComponent,
-    EditIssueComponent,
     FallBackComponent
   ],
   imports: [
@@ -69,7 +66,7 @@ import {OpenIssueService} from './components/open-issue/open-issue.service';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes, {useHash: true})
   ],
   providers: [
     AppService,

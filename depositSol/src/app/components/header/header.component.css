@@ -45,7 +45,6 @@ form button:hover{
   color: ghostwhite;
 }
 .nav-bar{
-  margin: 0fr 5fr 0fr;
 }
 
 .nav-link{
@@ -59,6 +58,7 @@ ul{
   line-height: 2em;
   position: inherit;
   display: inline-flex;
+  font-size: large;
 }
 li{
   margin: 0px 5px 0px;
@@ -121,11 +121,11 @@ li:before{
 nav {
   background-color: black;
   width: 100%;
+  padding: 5px 0;
 }
 .top-nav-s-btn-img{
   -webkit-filter: invert(1);
   filter: invert(1);
-  margin-right: 10px;
   margin-top: 3px;
 }
 .top-nav-s-btn-img img{
@@ -143,19 +143,18 @@ nav {
 .flex{
   display: inline-flex;
   width: 100%;
-  padding: 3px;
   justify-content: space-between;
 }
 .flex-start{
   justify-content: flex-start;
-  margin-right: 5px;
+  margin: 2px 0 0 5px;
 }
 .flex-end{
   justify-content: flex-end;
   display: inline-flex;
 }
 /*Extra small and small devices & portrait phones*/
-@media (max-width: 767.99px) {
+@media (max-width: 768px) {
   .nav-tabs,.top-nav-s-btn-txt{
     display: none;
   }
@@ -175,7 +174,7 @@ nav {
   }
 }
 /*Medium devices (tablets, 768px and up)*/
-@media (min-width: 768px) and (max-width: 991.98px) {
+@media (min-width: 768.1px) and (max-width: 992px) {
   .toggle-btn, .top-nav-s-btn-img{
     display: none ;
   }
@@ -188,7 +187,7 @@ nav {
   }
 }
 /*Large devices (desktops, 992px and up)*/
-@media (min-width: 992px) and (max-width: 1199.98px) {
+@media (min-width: 992px) and (max-width: 1200px) {
   .toggle-btn,.top-nav-s-btn-img{
     display: none;
   }

@@ -26,10 +26,6 @@
   width: 80px;
 }
 
-.issue-count{
-
-}
-
 .card-header{
   background-color: #e7e7e7;
   min-height: 40px;
@@ -92,4 +88,11 @@
 
 .row3{
   padding: 0 10px;
+}
+
+button{
+  background-color:transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
 }

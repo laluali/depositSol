@@ -6,7 +6,6 @@ import {Routes} from '@angular/router';
 import {ContentComponent} from './components/content/content.component';
 import {OpenIssueComponent} from './components/open-issue/open-issue.component';
 import {FallBackComponent} from './components/fall-back/fall-back.component';
-import {EditIssueComponent} from './components/edit-issue/edit-issue.component';
 
 export const appRoutes: Routes = [
   {
@@ -16,7 +15,8 @@ export const appRoutes: Routes = [
   },
   {
     path: 'home',
-    component: ContentComponent
+    component: ContentComponent,
+    runGuardsAndResolvers: 'always'
   },
   {
     path: 'openIssue',
@@ -24,7 +24,8 @@ export const appRoutes: Routes = [
   },
   {
     path: 'openIssue/:issueId',
-    component: OpenIssueComponent
+    component: OpenIssueComponent,
+    runGuardsAndResolvers: 'always',
   },
   {
     path: '**',

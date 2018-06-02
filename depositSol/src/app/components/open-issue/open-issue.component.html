@@ -1,37 +1,102 @@
-<div class="header">
-  <form [formGroup]="openIssueForm">
-    <div>
-      <div *ngIf="formMode == 'DISPLAY'">
-        {{openIssueForm.value['title']}} || {{openIssueForm.value['body']}}
-        <span *ngFor="let tag of labelsOnIssue">
-          <app-ds-tag [tagKey]="labelSearchKey" [showBorder]="true" [showColorBar]="true" [isImage]="false" [tag]="tag"></app-ds-tag>
-        </span>
-        <span *ngFor="let tag of assigneesOnIssue">
-          <app-ds-tag [tagKey]="assigneeSearchKey" [showBorder]="true" [showColorBar]="true" [isImage]="false" [tag]="tag"></app-ds-tag>
-        </span>
-        <span *ngFor="let tag of milestonesOnIssue">
-          <app-ds-tag [tagKey]="milestoneSearchKey" [showBorder]="true" [showColorBar]="true" [isImage]="false" [tag]="tag"></app-ds-tag>
-        </span>
-      </div>
-      <div *ngIf="formMode == 'EDIT'">
-        <input type="text" formControlName="title" [value]="openIssueForm.value['title']"/>
-        <textarea  formControlName="body" [value]="openIssueForm.value['body']"></textarea>
-        <app-ds-multiselect-drop-down (getFilteredList)="filteredLabels($event);" [searchKey]="labelSearchKey" [id]="labelId" [dropDownLabel]="filterLabel"
-                                      [filteredList]="labelsOnIssue" [refreshResults]="true" [showBorder]="true" [selectList]="labelList" [showColorBar]="true"></app-ds-multiselect-drop-down>
-        <app-ds-multiselect-drop-down *ngIf="assigneeList" (getFilteredList)="filteredAssingnee($event);" [searchKey]="assigneeSearchKey" [id]="assigneeId" [dropDownLabel]="filterAssignee"
-                                      [filteredList]="assigneesOnIssue" [refreshResults]="true" [selectList]="assigneeList" [showBorder]="false" [showColorBar]="false" [isImage]="true"></app-ds-multiselect-drop-down>
-        <app-ds-multiselect-drop-down *ngIf="milestoneList" (getFilteredList)="filteredMilestones($event);" [searchKey]="milestoneSearchKey" [id]="milestoneId" [dropDownLabel]="filterMilestone"
-                                      [filteredList]="milestonesOnIssue" [refreshResults]="true" [selectList]="milestoneList" [showBorder]="false" [showColorBar]="false" [isImage]="true"></app-ds-multiselect-drop-down>
-      </div>
-      <div *ngIf="formMode == 'CREATE'">
-        <input type="text" formControlName="title" [value]="openIssueForm.value['title']"/>
-        <textarea  formControlName="body" [value]="openIssueForm.value['body']"></textarea>
+<div class="grid-container">
+  <div class="sec1">
+    <app-ds-repo-detail></app-ds-repo-detail>
+  </div>
+  <div class="sec2">
+    <div></div>
+    <div class="col2">
+      <form class="form-wrapper" [formGroup]="openIssueForm">
+        <div class="issue-dashboard">
+          Issue :
+          <a [routerLink]="'/openIssue/'+issueId">#{{issueId}}</a>
+          <img *ngIf="formMode == 'DISPLAY'" (click)="changeFormMode();" class="icon15" [src]="editImg" [alt]="'Edit ' + issueId " [title]="'Edit #' + issueId ">
+          <img *ngIf="formMode == 'EDIT'" (click)="cancelFn();" class="icon15" [src]="cancelImg" [alt]="'Cancel changes done to ' + issueId " [title]="'Cancel changes done to #' + issueId ">
+        </div>
+        <div class="issue-detail-wrapper">
+
+          <div class="form-element">
+            <span class="title">
+              <label class="title-head"> Title*</label>
+              <span *ngIf="formMode == 'DISPLAY'" class="title-body">{{openIssueForm.value['title']}}</span>
+              <div class="form-input">
+                <input [style.border]="(openIssueForm.value['title'] == '') ? '2px solid red' : ''" *ngIf="formMode == 'CREATE' || formMode == 'EDIT'" type="text" formControlName="title" [value]="openIssueForm.value['title']"/>
+              </div>
+            </span>
+          </div>
+
+          <div class="form-element">
+            <span class="title">
+              <label class="title-head">Description </label>
+              <span *ngIf="formMode == 'DISPLAY'" class="title-body">{{openIssueForm.value['body']}}</span>
+              <div class="form-input">
+                <textarea *ngIf="formMode == 'CREATE' || formMode == 'EDIT'" formControlName="body" [value]="openIssueForm.value['body']"></textarea>
+              </div>
+            </span>
+          </div>
+
+          <div class="form-element">
+            <span class="title">
+              <label class="title-head">Label </label>
+              <ul *ngIf="formMode == 'DISPLAY'" class="tag-list">
+                <li *ngFor="let tag of labelsOnIssue">
+                  <app-ds-tag [tagKey]="labelSearchKey" [showBorder]="true" [showColorBar]="true" [isImage]="false" [tag]="tag"></app-ds-tag>
+                </li>
+              </ul>
+              <div *ngIf="formMode == 'CREATE' || formMode == 'EDIT'">
+                <div class="form-input">
+                  <app-ds-multiselect-drop-down (getFilteredList)="filteredLabels($event);" [searchKey]="labelSearchKey" [id]="labelId" [dropDownLabel]=""
+                                              [filteredList]="labelsOnIssue" [refreshResults]="true" [showBorder]="true" [selectList]="labelList" [showColorBar]="true"></app-ds-multiselect-drop-down>
+                </div>
+              </div>
+            </span>
+          </div>
+
+          <div class="form-element">
+            <span class="title">
+              <label class="title-head">Assignee </label>
+              <ul *ngIf="formMode == 'DISPLAY'" class="tag-list">
+                <li *ngFor="let tag of assigneesOnIssue">
+                <app-ds-tag [tagKey]="assigneeSearchKey" [showBorder]="true" [showColorBar]="true" [isImage]="false" [tag]="tag"></app-ds-tag>
+              </li>
+              </ul>
+              <div *ngIf="formMode == 'CREATE' || formMode == 'EDIT'">
+                <div class="form-input">
+                  <app-ds-multiselect-drop-down *ngIf="assigneeList" (getFilteredList)="filteredAssingnee($event);" [searchKey]="assigneeSearchKey" [id]="assigneeId" [dropDownLabel]=""
+                                            [filteredList]="assigneesOnIssue" [refreshResults]="true" [selectList]="assigneeList" [showBorder]="false" [showColorBar]="false" [isImage]="true"></app-ds-multiselect-drop-down>
+
+                </div>
+              </div>
+            </span>
+          </div>
+
+          <div class="form-element">
+            <span class="title">
+              <label class="title-head">Milestone </label>
+              <ul  *ngIf="formMode == 'DISPLAY'" class="tag-list">
+                <span *ngFor="let tag of milestonesOnIssue">
+                  <app-ds-tag [tagKey]="milestoneSearchKey" [showBorder]="true" [showColorBar]="true" [isImage]="false" [tag]="tag"></app-ds-tag>
+                </span>
+              </ul>
+              <div *ngIf="formMode == 'CREATE' || formMode == 'EDIT'">
+                <div class="form-input">
+                  <app-ds-multiselect-drop-down *ngIf="milestoneList" (getFilteredList)="filteredMilestones($event);" [searchKey]="milestoneSearchKey" [id]="milestoneId" [dropDownLabel]=""
+                                              [filteredList]="milestonesOnIssue" [refreshResults]="true" [selectList]="milestoneList" [showBorder]="false" [showColorBar]="false" [isImage]="true"></app-ds-multiselect-drop-down>
+
+                </div>
+              </div>
+            </span>
+          </div>
+        </div>
+      </form>
+      <div class="fly-right">
+        <button class="form-submit" *ngIf="formMode == 'CREATE' || formMode == 'EDIT'" [disabled]="!openIssueForm.valid" (click)="submitForm();">Submit</button>
+        <button class="form-cancel" *ngIf="formMode == 'EDIT'" (click)="cancelFn();">Cancel</button>
       </div>
     </div>
-  </form>
-  <button *ngIf="formMode == 'CREATE'" [disabled]="(openIssueForm.status=='VALID' ? false : true)" (click)="submitForm();">Submit</button>
-    {{openIssueForm.value | json}}
-  {{openIssueForm.status | json}}
+  </div>
+  <div class="sec3">
+
+  </div>
 </div>
-<button (click)="changeFormMode();">edit</button>
-<button [disabled]="(openIssueForm.status=='VALID' ? false : true)" (click)="submitForm();">Submit</button>
+  {{openIssueForm.status | json}}
+

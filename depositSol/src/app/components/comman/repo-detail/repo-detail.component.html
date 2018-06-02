@@ -1,22 +1,20 @@
 <div class="repo-container">
   <div class="repo-breadcrum">
-    <img class="repo-d-icon-checked" [src]="repoImg">
-    <a href="{{orgURL}}">{{orgLogin}}</a> <span>/</span> <a href="{{repoHTMLURL}}"><b>{{repoName}}</b></a>
+    <img class="repo-d-icon-checked vertical-centre" [src]="repoImg">
+    <a [href]="orgURL">{{orgLogin}}</a>
+    <span>/</span>
+    <a [title]=" 'Open Issue : ' + openIssuesCount + '; Closed Issue :' + closedIssuesCount" [href]="repoHTMLURL">
+      <b>{{repoName}}</b>
+    </a>
   </div>
-  <div class="repo-figures">
-    <div _ngcontent-c10="" class="repo-header">
-      <span _ngcontent-c10="" class="repo-header-left"> Open Issue : {{openIssuesCount}} </span>
-      <button _ngcontent-c10="" class="open-issue-btn" routerLink="/openIssue" tabindex="0"> New Issue </button>
-      <span _ngcontent-c10="" class="repo-header-right"> Closed Issue :{{closedIssuesCount}} </span>
-    </div>
-      <!--<span class="repo-detail">{{}}</span>
-      <span class="repo-detail">{{}}</span>
-      <span class="repo-detail">{{}}</span>-->
-  </div>
-  <span class="repo-grid">
+  <span class="repo-grid" tabindex="0">
     <app-ds-star-repo [starCount]="starCount" [organization]="organization" [repoName]="repoName" [repoHTMLURL]="repoHTMLURL"></app-ds-star-repo>
     <app-ds-watch-repo [watchCount]="subscribers" ></app-ds-watch-repo>
     <app-ds-fork-repo [forkCount]="forkCount"></app-ds-fork-repo>
+    <button class="issue-button-wrapper" routerLink="/openIssue" >
+      <img title="Add New Issue" class="repo-d-icon-checked vertical-centre" [src]="addIssueImg">
+      <span class="repo-button"> New Issue </span>
+    </button>
   </span>
 </div>
 <p>

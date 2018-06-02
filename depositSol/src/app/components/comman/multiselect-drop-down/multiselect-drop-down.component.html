@@ -1,6 +1,6 @@
 
 <div class="suggestions">
-  <h3>{{dropDownLabel}}</h3>
+  <h3 *ngIf="dropDownLabel">{{dropDownLabel}}</h3>
   <ul *ngIf="filteredList.length > 0" class="selected-sugg">
   <li *ngFor="let item of filteredList">
     <a class="suggestions" href="javascrip:void(0);" (click)="removeSelection(item);">

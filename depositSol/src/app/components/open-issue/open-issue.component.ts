@@ -1,7 +1,7 @@
-import {Component, forwardRef, Input, OnChanges, OnDestroy, OnInit} from '@angular/core';
+import {AfterViewChecked, AfterViewInit, Component, forwardRef, Input, OnChanges, OnDestroy, OnInit} from '@angular/core';
 import {ControlValueAccessor, FormBuilder, FormControl, FormGroup, NG_VALUE_ACCESSOR, Validators} from '@angular/forms';
 import {IssueCardService} from '../comman/issue-card/issue-card.service';
-import {backendURL, FORM_MODE} from '../../constants/global.constant';
+import {backendURL, dsImage, FORM_MODE} from '../../constants/global.constant';
 import {OpenIssueService} from './open-issue.service';
 import {ActivatedRoute, NavigationEnd, NavigationStart, Router} from '@angular/router';
 
@@ -10,15 +10,16 @@ import {ActivatedRoute, NavigationEnd, NavigationStart, Router} from '@angular/r
   templateUrl: './open-issue.component.html',
   styleUrls: ['./open-issue.component.css']
 })
-export class OpenIssueComponent implements OnInit, OnDestroy {
+export class OpenIssueComponent implements OnInit, OnDestroy{
 
   constructor(private _formBuilder: FormBuilder,
               private _issueCardService: IssueCardService,
               private _openIssueService: OpenIssueService,
               private router: Router,
-              private route: ActivatedRoute) { }
+              private route: ActivatedRoute) {}
 
   openIssueForm: FormGroup;
+  refIssueForm: FormGroup;
   formValues: any;
   labelList: any = [];
   filteredLabelList: any = [];
@@ -48,11 +49,20 @@ export class OpenIssueComponent implements OnInit, OnDestroy {
   milestoneId: string;
   filteredAssigneeList: any = [];
   filteredMilestoneList: any = [];
-
+  editImg: string;
+  saveImg: string;
+  cancelImg: string;
   ngOnInit() {
     this.route.params.subscribe( params => {
       this.issueId = params['issueId'];
+      if ( params['issueId']) {
+        this.getIssueDetail(this.issueId);
+        this.formMode = FORM_MODE.DISPLAY;
+      }
     });
+    this.editImg = dsImage.edit;
+    this.saveImg = dsImage.save;
+    this.cancelImg = dsImage.cross;
     this.labelsSubscription = this._issueCardService.getAllLabels$(backendURL.labels).subscribe(
       success => {
         this.labelList = success;
@@ -79,17 +89,13 @@ export class OpenIssueComponent implements OnInit, OnDestroy {
     this.assigneeId = 'assigneeId';
     this.sortId = 'sortId';
     this.milestoneId = 'milestoneId'
-    console.log(this.route.routeConfig.path);
-    if (this.issueId === undefined && this.issueId === null) {
+    if (this.issueId === undefined || this.issueId === null) {
       this.formMode = FORM_MODE.CREATE;
       this.filterLabel = 'Filter Labels: ';
       this.filterAssignee = 'Filter Assignee: ';
       this.labelId = 'labelId';
       this.assigneeId = 'assigneeId';
       this.milestoneId = 'milestoneId';
-    } else {
-      this.formMode = FORM_MODE.DISPLAY;
-      this.getIssueDetail(this.issueId);
     }
     this.openIssueForm = new FormGroup({
       title: new FormControl('', Validators.required),
@@ -99,8 +105,15 @@ export class OpenIssueComponent implements OnInit, OnDestroy {
       assignees: new FormControl(),
       state: new FormControl('open')
     });
+    this.refIssueForm = new FormGroup({
+      title: new FormControl('', Validators.required),
+      body: new FormControl(),
+      milestone: new FormControl(),
+      labels: new FormControl(),
+      assignees: new FormControl(),
+      state: new FormControl('open')
+    });
   }
-
 
   filteredLabels(labelList) {
     this.openIssueForm.controls['labels'].setValue(labelList);
@@ -116,7 +129,31 @@ export class OpenIssueComponent implements OnInit, OnDestroy {
 
   submitForm() {
     if (this.formMode === FORM_MODE.CREATE) {
-      this._openIssueService.postNewIssue$(this.issueId, backendURL.issues, this.openIssueForm.value).subscribe(
+      if (this.openIssueForm.controls['labels'].value != null) {
+        this.openIssueForm.controls['labels'].value.forEach(
+          label => {
+            this.filteredLabelList.push(label[this.labelSearchKey]);
+          }
+        );
+      }
+      if (this.openIssueForm.controls['assignees'].value != null) {
+        this.openIssueForm.controls['assignees'].value.forEach(
+          assignee => {
+            this.filteredAssigneeList.push(assignee[this.assigneeSearchKey]);
+          }
+        );
+      }
+      if (this.openIssueForm.controls['milestone'].value != null) {
+        this.openIssueForm.controls['milestone'].value.forEach(
+          milestone => {
+            this.filteredMilestoneList.push(milestone[this.milestoneSearchKey]);
+          }
+        );
+      }
+      this.openIssueForm.controls['labels'].setValue(this.filteredLabelList);
+      this.openIssueForm.controls['assignees'].setValue(this.filteredAssigneeList);
+      this.openIssueForm.controls['milestone'].setValue((this.filteredMilestoneList.length > 0) ? this.filteredMilestoneList : null);
+      this._openIssueService.postNewIssue$(backendURL.issues, this.openIssueForm.value).subscribe(
         success => {
           console.log(success);
           this.router.navigate(['']);
@@ -124,28 +161,10 @@ export class OpenIssueComponent implements OnInit, OnDestroy {
         error => {console.log(error); }
       );
     } else {
-      this.openIssueForm.controls['labels'].value.forEach(
-        label => {
-          this.filteredLabelList.push(label[this.labelSearchKey]);
-        }
-      );
-      this.openIssueForm.controls['assignees'].value.forEach(
-        assignee => {
-          this.filteredAssigneeList.push(assignee[this.assigneeSearchKey]);
-        }
-      );
-      this.openIssueForm.controls['milestone'].value.forEach(
-        milestone => {
-          this.filteredMilestoneList.push(milestone[this.milestoneSearchKey]);
-        }
-      );
-      this.openIssueForm.controls['labels'].setValue(this.filteredLabelList);
-      this.openIssueForm.controls['assignees'].setValue(this.filteredAssigneeList);
-      this.openIssueForm.controls['milestone'].setValue((this.filteredMilestoneList.length > 0) ? this.filteredMilestoneList : '');
       this._openIssueService.updateIssue$(this.issueId, backendURL.issues, this.openIssueForm.value).subscribe(
         success => {
           console.log(success);
-          this.router.navigate(['']);
+          this.router.navigate(['home']);
         },
         error => {console.log(error); }
       );
@@ -168,7 +187,8 @@ export class OpenIssueComponent implements OnInit, OnDestroy {
           this.milestonesOnIssue = success['milestone'] ? success['milestone'] : [];
           this.openIssueForm.controls['milestone'].setValue(this.milestonesOnIssue);
           this.assigneesOnIssue = success['assignees'] ? success['assignees'] : [];
-        this.openIssueForm.controls['assignees'].setValue(this.assigneesOnIssue);
+          this.openIssueForm.controls['assignees'].setValue(this.assigneesOnIssue);
+          this.refIssueForm = this.openIssueForm;
         },
       error => {}
     );
@@ -180,7 +200,6 @@ export class OpenIssueComponent implements OnInit, OnDestroy {
         this.labelsOnIssue.forEach(
           lab => {
             if (label.id === lab.id) {
-              console.log(label);
               this.labelList.splice(this.labelList.indexOf(label), 1);
             }
           }
@@ -192,7 +211,6 @@ export class OpenIssueComponent implements OnInit, OnDestroy {
         this.assigneesOnIssue.forEach(
           aoi => {
             if (assignee.id === aoi.id) {
-              console.log(assignee);
               this.assigneeList.splice(this.assigneeList.indexOf(assignee), 1);
             }
           }
@@ -211,5 +229,11 @@ export class OpenIssueComponent implements OnInit, OnDestroy {
       }
     );
     this.formMode = FORM_MODE.EDIT;
+  }
+
+  cancelFn() {
+    this.openIssueForm = this.refIssueForm;
+    // logic to refill form to original state
+    this.formMode = FORM_MODE.DISPLAY;
   }
 }

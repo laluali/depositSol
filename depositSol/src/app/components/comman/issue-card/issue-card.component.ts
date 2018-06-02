@@ -4,6 +4,7 @@ import {backendURL, dsImage, REPO} from '../../../constants/global.constant';
 import {IssueCardService} from './issue-card.service';
 import {TagService} from '../tag/tag.service';
 import {CommonService} from '../../../services/common.service';
+import {RepoDetailService} from '../repo-detail/repo-detail.service';
 
 @Component({
   selector: 'app-ds-issue-card',
@@ -13,7 +14,8 @@ import {CommonService} from '../../../services/common.service';
 export class IssueCardComponent implements OnInit, IssueCard, OnDestroy {
 
   constructor(private _issueCardService: IssueCardService,
-              private _commonService: CommonService) { }
+              private _commonService: CommonService,
+              private _repoDetailService: RepoDetailService) { }
 
   title: string;
   labels: any;
@@ -29,7 +31,7 @@ export class IssueCardComponent implements OnInit, IssueCard, OnDestroy {
   imageURL: string = dsImage.comment;
   issueImage: string = dsImage.issue;
   dropDownLabel: string;
-  openIssuesCount: number;
+
   @Input() cardList: IssueCard[];
   @Output() labelList: any = [];
 
@@ -70,7 +72,6 @@ export class IssueCardComponent implements OnInit, IssueCard, OnDestroy {
     this.issueSubscription = this._issueCardService.getIssues$(backendURL.searchIssues, params ? params : this._commonService.getSearchString()).subscribe(
       success => {
         this.cardList = success['items'];
-        this.openIssuesCount = success['total_count'];
       },
       error => { console.log(error); }// to be handled
     );
