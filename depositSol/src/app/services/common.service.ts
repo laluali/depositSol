@@ -1,6 +1,5 @@
 import {ComponentFactoryResolver, Injectable, ViewContainerRef} from '@angular/core';
 import {AppService} from '../app.service';
-import {IssueCardService} from '../components/comman/issue-card/issue-card.service';
 import {REPO} from '../constants/global.constant';
 
 @Injectable()
@@ -66,13 +65,6 @@ export class CommonService {
 
   getSearchString( labelparam?, sortParam?, assigneeParam?, milestoneParam?) {
     let searchString = 'repo:' + REPO + '+is:issue+is:open';
-      return searchString += (labelparam ? labelparam : '') + (sortParam ? sortParam : '') + (assigneeParam ? assigneeParam : '') + (milestoneParam ? milestoneParam : '');
-  }
-
-  getDynamicComponentInstance(container: ViewContainerRef, componentName: any, resolver: ComponentFactoryResolver) {
-    container.clear();
-    const factory: any =  resolver.resolveComponentFactory(componentName);
-    const ComponentRef: any = container.createComponent(factory);
-    return ComponentRef.instance.type;
+    return searchString += (labelparam ? labelparam : '') + (sortParam ? sortParam : '') + (assigneeParam ? assigneeParam : '') + (milestoneParam ? milestoneParam : '');
   }
 }

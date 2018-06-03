@@ -11,7 +11,6 @@ export class ForkRepoComponent implements OnInit {
 
   constructor(private _forkRepoService: ForkRepoService) { }
   @Input() forkCount: number;
-  isFork: boolean;
   isDisabled: boolean;
   forkImg: string = dsImage.fork;
 

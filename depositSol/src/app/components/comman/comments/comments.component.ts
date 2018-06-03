@@ -11,7 +11,7 @@ export class CommentsComponent implements OnInit {
 
   @Input() commentURL: string;
   @Input()imageURL: string;
-  @Input() comments: string
+  @Input() comments: string;
 
   ngOnInit() {
   }

@@ -3,7 +3,10 @@ import { FilterPipe } from './filter.pipe';
 
 describe('FilterPipe', () => {
   let pipe: FilterPipe;
-  let items: any;
+  const itemsObj = [{'name': 'testname1'}, {'name': 'testname2'}];
+  const itemObjRes = [{'name': 'testname2'}];
+  const items = ['testname1', 'testname2'];
+  const itemsRes = ['testname2'];
   beforeEach((() => {
     pipe = new FilterPipe();
   }));
@@ -11,6 +14,12 @@ describe('FilterPipe', () => {
     expect(pipe).toBeTruthy();
   });
   it('providing no serchText returns itemsarray', function () {
-    expect(pipe.transform( '', '', '')).toBe([]);
+    expect(pipe.transform( itemsObj, '', '')).toEqual(itemsObj);
+  });
+  it('providing no searchKey returns relevant itemsarray', function () {
+    expect(pipe.transform( items, '2', '')).toEqual(itemsRes);
+  });
+  it('providing searchText returns relevant itemsarray', function () {
+    expect(pipe.transform( itemsObj, '2', 'name')).toEqual(itemObjRes);
   });
 });

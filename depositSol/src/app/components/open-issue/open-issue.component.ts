@@ -48,7 +48,7 @@ export class OpenIssueComponent implements OnInit, OnDestroy{
   sortId: string;
   milestoneId: string;
   filteredAssigneeList: any = [];
-  filteredMilestoneList: any = [];
+  filteredMilestone: any;
   editImg: string;
   saveImg: string;
   cancelImg: string;
@@ -128,31 +128,32 @@ export class OpenIssueComponent implements OnInit, OnDestroy{
   }
 
   submitForm() {
+    if (this.openIssueForm.controls['labels'].value != null) {
+      this.openIssueForm.controls['labels'].value.forEach(
+        label => {
+          this.filteredLabelList.push(label[this.labelSearchKey]);
+        }
+      );
+      this.openIssueForm.controls['labels'].setValue(this.filteredLabelList ? this.filteredLabelList : []);
+    }
+    if (this.openIssueForm.controls['assignees'].value != null) {
+      this.openIssueForm.controls['assignees'].value.forEach(
+        assignee => {
+          this.filteredAssigneeList.push(assignee[this.assigneeSearchKey]);
+        }
+      );
+      this.openIssueForm.controls['assignees'].setValue(this.filteredAssigneeList ? this.filteredAssigneeList : []);
+    }
+    if (this.openIssueForm.controls['milestone'].value != null) {
+      this.openIssueForm.controls['milestone'].value.forEach(
+        milestone => {
+          this.filteredMilestone = milestone['number'];
+        }
+      );
+      this.openIssueForm.controls['milestone'].setValue(this.filteredMilestone ? this.filteredMilestone : '');
+    }
+
     if (this.formMode === FORM_MODE.CREATE) {
-      if (this.openIssueForm.controls['labels'].value != null) {
-        this.openIssueForm.controls['labels'].value.forEach(
-          label => {
-            this.filteredLabelList.push(label[this.labelSearchKey]);
-          }
-        );
-      }
-      if (this.openIssueForm.controls['assignees'].value != null) {
-        this.openIssueForm.controls['assignees'].value.forEach(
-          assignee => {
-            this.filteredAssigneeList.push(assignee[this.assigneeSearchKey]);
-          }
-        );
-      }
-      if (this.openIssueForm.controls['milestone'].value != null) {
-        this.openIssueForm.controls['milestone'].value.forEach(
-          milestone => {
-            this.filteredMilestoneList.push(milestone[this.milestoneSearchKey]);
-          }
-        );
-      }
-      this.openIssueForm.controls['labels'].setValue(this.filteredLabelList);
-      this.openIssueForm.controls['assignees'].setValue(this.filteredAssigneeList);
-      this.openIssueForm.controls['milestone'].setValue((this.filteredMilestoneList.length > 0) ? this.filteredMilestoneList : null);
       this._openIssueService.postNewIssue$(backendURL.issues, this.openIssueForm.value).subscribe(
         success => {
           console.log(success);
@@ -161,6 +162,7 @@ export class OpenIssueComponent implements OnInit, OnDestroy{
         error => {console.log(error); }
       );
     } else {
+      console.log(this.openIssueForm.value);
       this._openIssueService.updateIssue$(this.issueId, backendURL.issues, this.openIssueForm.value).subscribe(
         success => {
           console.log(success);
@@ -183,8 +185,8 @@ export class OpenIssueComponent implements OnInit, OnDestroy{
           this.openIssueForm.controls['title'].setValue(success['title'] ? success['title'] : '');
           this.openIssueForm.controls['body'].setValue(success['body'] ? success['body'] : '');
           this.labelsOnIssue = success['labels'] ? success['labels'] : [];
-           this.openIssueForm.controls['labels'].setValue(this.labelsOnIssue);
-          this.milestonesOnIssue = success['milestone'] ? success['milestone'] : [];
+          this.openIssueForm.controls['labels'].setValue(this.labelsOnIssue);
+          success['milestone'] ? this.milestonesOnIssue.push(success['milestone']) : this.milestonesOnIssue = [];
           this.openIssueForm.controls['milestone'].setValue(this.milestonesOnIssue);
           this.assigneesOnIssue = success['assignees'] ? success['assignees'] : [];
           this.openIssueForm.controls['assignees'].setValue(this.assigneesOnIssue);

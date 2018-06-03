@@ -61,7 +61,6 @@ export class IssueCardComponent implements OnInit, IssueCard, OnDestroy {
       },
       error => { console.log(error); }// to be handled
     );
-    this.dropDownLabel = 'Filter Label';
   }
 
   ngOnDestroy() {

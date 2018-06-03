@@ -1,11 +1,12 @@
 import { TestBed, inject } from '@angular/core/testing';
 
 import { IssueCardService } from './issue-card.service';
+import {BackendService} from '../../../services/backend.service';
 
 describe('IssueCardService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [IssueCardService]
+      providers: [IssueCardService, BackendService]
     });
   });
 
