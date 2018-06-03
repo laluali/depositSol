@@ -1,7 +1,7 @@
 @import "../../components/content/content.component.css";
 
 .form-wrapper{
-  margin: 5px;
+  margin: 5px 5px 0 5px;
 }
 
 .title{
@@ -138,9 +138,6 @@ button:disabled{
     background-color: transparent;
     padding: 0 5px;
     text-align: right;
-  }
-  .grid-container{
-    display: inline-block;
   }
 
   .title{

@@ -1,4 +1,4 @@
-<div class="grid-container">
+<div class="grid-container" xmlns="http://www.w3.org/1999/html">
   <div class="sec1">
     <app-ds-repo-detail></app-ds-repo-detail>
   </div>
@@ -7,8 +7,8 @@
     <div class="col2">
       <form class="form-wrapper" [formGroup]="openIssueForm">
         <div class="issue-dashboard">
-          Issue :
-          <a [routerLink]="'/openIssue/'+issueId">#{{issueId}}</a>
+          <span *ngIf="formMode == 'CREATE'"> Describe </span>Issue :
+          <a *ngIf="formMode != 'CREATE'" [routerLink]="'/openIssue/'+issueId">#{{issueId}}</a>
           <img *ngIf="formMode == 'DISPLAY'" (click)="changeFormMode();" class="icon15" [src]="editImg" [alt]="'Edit ' + issueId " [title]="'Edit #' + issueId ">
           <img *ngIf="formMode == 'EDIT'" (click)="cancelFn();" class="icon15" [src]="cancelImg" [alt]="'Cancel changes done to ' + issueId " [title]="'Cancel changes done to #' + issueId ">
         </div>
@@ -19,7 +19,7 @@
               <label class="title-head"> Title*</label>
               <span *ngIf="formMode == 'DISPLAY'" class="title-body">{{openIssueForm.value['title']}}</span>
               <div class="form-input">
-                <input [style.border]="(openIssueForm.value['title'] == '') ? '2px solid red' : ''" *ngIf="formMode == 'CREATE' || formMode == 'EDIT'" type="text" formControlName="title" [value]="openIssueForm.value['title']"/>
+                <input [style.border]="(openIssueForm.value['title'] == '' && openIssueForm.touched) ? '2px solid red' : ''" *ngIf="formMode == 'CREATE' || formMode == 'EDIT'" type="text" formControlName="title" [value]="openIssueForm.value['title']"/>
               </div>
             </span>
           </div>
@@ -98,5 +98,3 @@
 
   </div>
 </div>
-  {{openIssueForm.status | json}}
-

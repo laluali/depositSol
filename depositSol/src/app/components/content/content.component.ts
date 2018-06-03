@@ -8,7 +8,7 @@ import {CommonService} from '../../services/common.service';
   selector: 'app-ds-content',
   templateUrl: './content.component.html',
   styleUrls: ['./content.component.css'],
-  animations: [trigger(
+  /*animations: [trigger(
     'openClose',
     [
       state('collapsed, void', style({display: 'none'})),
@@ -24,7 +24,7 @@ import {CommonService} from '../../services/common.service';
         ]
       )
     ])
-  ],
+  ],*/
 })
 export class ContentComponent implements OnInit {
 
