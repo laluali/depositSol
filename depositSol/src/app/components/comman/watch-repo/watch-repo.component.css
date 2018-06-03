@@ -1,1 +1,5 @@
 @import "../repo-detail/repo-detail.component.css";
+
+.vertical-centre{
+  vertical-align: middle;
+}

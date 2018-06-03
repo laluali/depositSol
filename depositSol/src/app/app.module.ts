@@ -37,6 +37,7 @@ import {FallBackComponent} from './components/fall-back/fall-back.component';
 import {OpenIssueComponent} from './components/open-issue/open-issue.component';
 import {OpenIssueService} from './components/open-issue/open-issue.service';
 import {CustomReuseStrategy} from './custom-reuse-strategy';
+import {LoaderService} from './components/comman/loader/loader.service';
 
 @NgModule({
   declarations: [
@@ -79,7 +80,8 @@ import {CustomReuseStrategy} from './custom-reuse-strategy';
     TagService,
     WatchService,
     ForkRepoService,
-    OpenIssueService
+    OpenIssueService,
+    LoaderService
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]

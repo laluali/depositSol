@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {LoaderService} from './loader.service';
 
 @Component({
   selector: 'app-ds-loader',
@@ -7,12 +8,15 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class LoaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _loaderService: LoaderService) { }
 
-  @Input() showLoader: boolean;
+  showLoader: boolean;
 
   ngOnInit() {
-    this.showLoader = true;
+    this.showLoader = false;
+    this._loaderService.showLoader.subscribe(
+      loaderState => this.showLoader = loaderState
+    );
   }
 
 }

@@ -4,6 +4,7 @@ import {IssueCardService} from '../comman/issue-card/issue-card.service';
 import {backendURL, dsImage, FORM_MODE} from '../../constants/global.constant';
 import {OpenIssueService} from './open-issue.service';
 import {ActivatedRoute, NavigationEnd, NavigationStart, Router} from '@angular/router';
+import {LoaderService} from '../comman/loader/loader.service';
 
 @Component({
   selector: 'app-ds-open-issue',
@@ -15,6 +16,7 @@ export class OpenIssueComponent implements OnInit, OnDestroy{
   constructor(private _formBuilder: FormBuilder,
               private _issueCardService: IssueCardService,
               private _openIssueService: OpenIssueService,
+              private _loaderService: LoaderService,
               private router: Router,
               private route: ActivatedRoute) {}
 
@@ -56,6 +58,7 @@ export class OpenIssueComponent implements OnInit, OnDestroy{
     this.route.params.subscribe( params => {
       this.issueId = params['issueId'];
       if ( params['issueId']) {
+        this._loaderService.showLoader.emit(true);
         this.getIssueDetail(this.issueId);
         this.formMode = FORM_MODE.DISPLAY;
       }
@@ -128,6 +131,7 @@ export class OpenIssueComponent implements OnInit, OnDestroy{
   }
 
   submitForm() {
+    this._loaderService.showLoader.emit(true);
     if (this.openIssueForm.controls['labels'].value != null) {
       this.openIssueForm.controls['labels'].value.forEach(
         label => {
@@ -156,10 +160,11 @@ export class OpenIssueComponent implements OnInit, OnDestroy{
     if (this.formMode === FORM_MODE.CREATE) {
       this._openIssueService.postNewIssue$(backendURL.issues, this.openIssueForm.value).subscribe(
         success => {
+          this._loaderService.showLoader.emit(false);
           console.log(success);
           this.router.navigate(['']);
         },
-        error => {console.log(error); }
+        error => {this._loaderService.showLoader.emit(false); console.log(error); }
       );
     } else {
       console.log(this.openIssueForm.value);
@@ -168,7 +173,7 @@ export class OpenIssueComponent implements OnInit, OnDestroy{
           console.log(success);
           this.router.navigate(['home']);
         },
-        error => {console.log(error); }
+        error => {this._loaderService.showLoader.emit(false); console.log(error); }
       );
     }
   }
@@ -191,6 +196,7 @@ export class OpenIssueComponent implements OnInit, OnDestroy{
           this.assigneesOnIssue = success['assignees'] ? success['assignees'] : [];
           this.openIssueForm.controls['assignees'].setValue(this.assigneesOnIssue);
           this.refIssueForm = this.openIssueForm;
+          this._loaderService.showLoader.emit(false);
         },
       error => {}
     );

@@ -8,6 +8,8 @@
   height: auto;
   max-height: 150px;
   overflow-y: auto;
+  width: 100%;
+  padding: 0 10px;
 }
 .selected-sugg > li{
   display: inline-block;
@@ -16,17 +18,19 @@
 .selected-sugg{
   border: 1px solid lightgrey;
   border-radius: 3px;
-  padding: 0 0 2px 2px
+  padding: 0 10px;
+  width: 100%;
 }
 .search-item{
   padding: 2px 0 2px;
 }
 input[type='text'],input[type='text']:focus {
-  border-bottom-color: black;
-  border-left-color: transparent;
-  border-right-color: transparent;
-  border-top-color: transparent;
   outline: none;
+  border: 2px solid #efefef;
+  border-radius: 5px;
+  width: 100%;
+  word-wrap: break-word;
+  padding: 0px 10px;
 }
 .sugg-input{
   width: 90%;

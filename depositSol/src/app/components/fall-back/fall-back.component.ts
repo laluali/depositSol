@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {dsImage} from '../../constants/global.constant';
 
 @Component({
   selector: 'app-ds-fall-back',
@@ -9,6 +10,7 @@ export class FallBackComponent implements OnInit {
 
   constructor() { }
 
+  catImg = dsImage.cat;
   ngOnInit() {
   }
 

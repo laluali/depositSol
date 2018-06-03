@@ -5,6 +5,7 @@ import {IssueCardService} from './issue-card.service';
 import {TagService} from '../tag/tag.service';
 import {CommonService} from '../../../services/common.service';
 import {RepoDetailService} from '../repo-detail/repo-detail.service';
+import {LoaderService} from '../loader/loader.service';
 
 @Component({
   selector: 'app-ds-issue-card',
@@ -15,7 +16,8 @@ export class IssueCardComponent implements OnInit, IssueCard, OnDestroy {
 
   constructor(private _issueCardService: IssueCardService,
               private _commonService: CommonService,
-              private _repoDetailService: RepoDetailService) { }
+              private _repoDetailService: RepoDetailService,
+              private _loaderService: LoaderService) { }
 
   title: string;
   labels: any;
@@ -68,9 +70,11 @@ export class IssueCardComponent implements OnInit, IssueCard, OnDestroy {
   }
 
   getIssues(params?: string) {
+    this._loaderService.showLoader.emit(true);
     this.issueSubscription = this._issueCardService.getIssues$(backendURL.searchIssues, params ? params : this._commonService.getSearchString()).subscribe(
       success => {
         this.cardList = success['items'];
+        this._loaderService.showLoader.emit(false);
       },
       error => { console.log(error); }// to be handled
     );
