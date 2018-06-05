@@ -23,7 +23,8 @@
 
 .title-body{
   padding: 10px 5px;
-  width: 100%
+  width: 90%;
+  text-align: justify;
 }
 
 
@@ -52,6 +53,7 @@ input[type='text'], textarea{
   width: 100%;
   word-wrap: break-word;
   padding: 10px;
+  text-align: justify;
 }
 
 input[type='text']:focus, textarea:focus{
@@ -91,7 +93,7 @@ button:disabled{
 }
 
 .form-submit:disabled{
-  background-color: #8bdbf1;
+  background-color: #9ccfff;
 }
 .form-submit{
   background-color: #7db9f1;

@@ -1,35 +1,45 @@
 .modal-open {
   overflow: hidden;
 }
-/*
-!*Extra small devices (portrait phones, less than 576px)*!
-@media (max-width: 575.98px) {
-  .block-xs{
-    display: inline-block;
+main{
+ margin-bottom: 20px;
+}
+footer{
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  height: 30px;
+}
+/*Extra small and small devices & portrait phones*/
+@media (max-width: 768px) {
+  main{
+    margin-bottom: 20px;
   }
 }
-!*Small devices (landscape phones, 576px and up)*!
-@media (min-width: 576px) and (max-width: 767.98px) {
-  .block-sm{
-    display: inline-block;
-  }
-}
-!*Medium devices (tablets, 768px and up)*!
+/*Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) and (max-width: 991.98px) {
-  .block-md{
-    display: inline-block;
+  .sec2 .col1, .sec2 .col3{
+    min-width: 150px !important;
+  }
+  .flex-pane, .close{
+    display: none;
   }
 }
-!*Large devices (desktops, 992px and up)*!
+/*Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) and (max-width: 1199.98px) {
-  .block-lg{
-    display: inline-block;
+  .sec2 .col1, .sec2 .col3{
+    min-width: 150px !important;
+  }
+  .flex-pane, .close{
+    display: none;
   }
 }
-!*Extra large devices (large desktops, 1200px and up)*!
+/*Extra large devices (large desktops, 1200px and up)*/
 @media (min-width: 1200px) {
-  .block-xl{
-    display: inline-block;
+  .flex-pane, .close{
+    display: none;
   }
 }
-*/
