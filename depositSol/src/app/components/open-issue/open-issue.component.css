@@ -156,7 +156,9 @@ button:disabled{
     padding: 10px;
     word-wrap: break-word;
   }
-
+  textarea{
+    min-height: 100px;
+  }
 }
 /*Medium devices (tablets, 768px and up)*/
 @media (min-width: 768.1px) and (max-width: 991.98px) {
