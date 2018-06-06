@@ -49,7 +49,7 @@ export class OpenIssueService {
   }
 
   deleteIssue$(issueId: number) {// :number
-    return this._backendService.doGet(backendURL.issues + '/' + issueId + '/lock')
+    return this._backendService.doDelete(backendURL.issues + '/' + issueId + '/lock')
       .map(
         (res) =>  <IssueCard[]> res
       )

@@ -116,10 +116,10 @@ button:disabled{
 .form-delete{
   background-color: #ff6864;
 }
-.form-cancel:hover{
+.form-delete:hover{
   background-color: #ff252c;
 }
-.form-cancel:focus{
+.form-delete:focus{
   background-color: #ff0005;
 }
 

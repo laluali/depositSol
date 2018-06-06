@@ -253,6 +253,7 @@ export class OpenIssueComponent implements OnInit, OnDestroy{
     this._openIssueService.deleteIssue$(this.issueId).subscribe(
       success => {
         this._loaderService.showLoader.emit(false);
+        this.router.navigate(['home'])
       },
       error => {
         console.log(error);
