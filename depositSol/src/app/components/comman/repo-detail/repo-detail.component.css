@@ -15,9 +15,9 @@
 }
 
 .repo-grid{
-  display: inline-grid;
-  grid-template-columns: repeat(4, 25fr);
-  grid-column-gap: 5px;
+  display: block;
+  /*grid-template-columns: repeat(3, 25fr);
+  grid-column-gap: 5px;*/
   float: right;
 }
 

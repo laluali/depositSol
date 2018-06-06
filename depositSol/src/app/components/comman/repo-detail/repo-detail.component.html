@@ -10,10 +10,12 @@
   <span class="repo-grid" tabindex="0">
     <app-ds-star-repo [starCount]="starCount" [organization]="organization" [repoName]="repoName" [repoHTMLURL]="repoHTMLURL"></app-ds-star-repo>
     <app-ds-watch-repo [watchCount]="subscribers" ></app-ds-watch-repo>
-    <app-ds-fork-repo [forkCount]="forkCount"></app-ds-fork-repo>
-    <button class="issue-button-wrapper" routerLink="/openIssue" >
-      <img title="Add New Issue" class="repo-d-icon-checked vertical-centre" [src]="addIssueImg">
-      <span class="repo-button"> New Issue </span>
+    <!--<app-ds-fork-repo [forkCount]="forkCount"></app-ds-fork-repo>-->
+    <button class="issue-button-wrapper" routerLink="/openIssue">
+      <img title="Add New Issue" class="repo-d-icon-checked" [src]="addIssueImg">
+      <div>
+        <span class="repo-button"> New Issue </span>
+      </div>
     </button>
   </span>
 </div>

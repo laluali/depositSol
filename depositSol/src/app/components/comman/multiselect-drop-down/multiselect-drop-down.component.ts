@@ -58,7 +58,7 @@ export class MultiselectDropDownComponent implements OnInit, OnDestroy {
   }
 
   toggleTag(selectedTag) {
-    if (((selectedTag.calledBy === 'sortId') && (selectedTag.calledBy === 'milestoneId')) && (this.filteredList.length > 0)) {
+    if (((selectedTag.calledBy === 'sortId') || (selectedTag.calledBy === 'milestoneId')) && (this.filteredList.length > 0)) {
       this.removeSelection(this.filteredList[0]);
     }
     selectedTag.selectionIndex = this.selectList.indexOf(selectedTag);

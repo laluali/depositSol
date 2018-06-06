@@ -8,8 +8,13 @@
   border-radius: 3px;
   margin: 3px;
 }
-
-
+a:active,  a:visited,  a:hover,  a,  a:link:visited,  a:visited:active {
+  text-decoration: none;
+  color: black;
+}
+.tag-container{
+  margin-bottom: 5px;
+}
 .tag-check{
   font-family: "Calibri Light";
   font-style: italic;

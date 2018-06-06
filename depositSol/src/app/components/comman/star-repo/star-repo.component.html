@@ -1,3 +1,7 @@
 <button [disabled]="isDisabled" (click)="toggleStar(isStar)">
   <img [alt]="starCount+ ' Stars'" [title]="starCount+ ' Starred'" [class]="isStar?'repo-d-icon-checked':'repo-d-icon'" [src]="starImg">
+  <div>
+    <span class="repo-button" *ngIf="isStar"> UnStar </span>
+    <span class="repo-button" *ngIf="!isStar"> Star </span>
+  </div>
 </button>

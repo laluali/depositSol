@@ -28,6 +28,6 @@
   <div class="sec3"></div>
 </div>
 <div class="flex-pane">
-  <button class="f-btn" (click)="showFilterPane(filterStateExpression);">Filter</button>
-  <button class="s-btn" (click)="showSortPane(sortStateExpression);">Sort</button>
+  <button class="f-btn" [disabled]="sortStateExpression == 'expanded'" (click)="showFilterPane(filterStateExpression);">Filter</button>
+  <button class="s-btn" [disabled]="filterStateExpression == 'expanded'" (click)="showSortPane(sortStateExpression);">Sort</button>
 </div>

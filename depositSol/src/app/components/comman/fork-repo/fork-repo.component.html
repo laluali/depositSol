@@ -1,4 +1,4 @@
-<button [disabled]="isDisabled" style="background-color:transparent; border-color:transparent;">
-  <img [alt]="forkCount + ' forks'" [title]="forkCount + ' forked'" class="repo-d-icon-checked" [src]="forkImg">
-  <span class="repo-d-icon-checked"></span>
+<button [disabled]="isDisabled" class="fork" style="background-color:transparent; border-color:transparent;cursor: not-allowed">
+  <img [alt]="forkCount + ' forks'" [title]="forkCount + ' forked'" class="repo-d-icon-checked vertical-centre" [src]="forkImg">
+  <span class="repo-button"> Fork </span>
 </button>

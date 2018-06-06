@@ -56,7 +56,7 @@ export class CommonService {
     if (milestone !== undefined || milestone !== null) {
       milestone.forEach(
         item => {
-          milestoneParam += '+milestone:"' + item.value + '"';
+          milestoneParam += '+milestone:"' + item.title + '"';
         }
       );
     }

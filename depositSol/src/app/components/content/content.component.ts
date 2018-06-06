@@ -147,7 +147,7 @@ export class ContentComponent implements OnInit {
   getIssues() {
     this._issueCardService.getIssueEvent.emit(
       this._commonService.getSearchString(
-        this.labelParam, this.sortParam, this.assigneeParam
+        this.labelParam, this.sortParam, this.assigneeParam, this.milestonesParam
     ));
   }
 }
