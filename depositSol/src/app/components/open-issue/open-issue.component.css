@@ -113,6 +113,17 @@ button:disabled{
 }
 
 
+.form-delete{
+  background-color: #ff6864;
+}
+.form-cancel:hover{
+  background-color: #ff252c;
+}
+.form-cancel:focus{
+  background-color: #ff0005;
+}
+
+
 @media (max-width: 768px) {
   .col1, .col3{
     display: none;

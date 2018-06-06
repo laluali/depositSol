@@ -91,6 +91,7 @@
       <div class="fly-right">
         <button class="form-submit" *ngIf="formMode == 'CREATE' || formMode == 'EDIT'" [disabled]="!openIssueForm.valid" (click)="submitForm();">Submit</button>
         <button class="form-cancel" *ngIf="formMode == 'EDIT'" (click)="cancelFn();">Cancel</button>
+        <button class="form-delete" *ngIf="formMode == 'DISPLAY'" (click)="deleteFn();">Delete</button>
       </div>
     </div>
   </div>

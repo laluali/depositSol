@@ -47,4 +47,16 @@ export class OpenIssueService {
         }
       );
   }
+
+  deleteIssue$(issueId: number) {// :number
+    return this._backendService.doGet(backendURL.issues + '/' + issueId + '/lock')
+      .map(
+        (res) =>  <IssueCard[]> res
+      )
+      .catch(
+        (error: any) => {
+          return Observable.throw(error);
+        }
+      );
+  }
 }

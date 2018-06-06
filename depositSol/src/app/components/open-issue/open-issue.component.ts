@@ -5,6 +5,7 @@ import {backendURL, dsImage, FORM_MODE} from '../../constants/global.constant';
 import {OpenIssueService} from './open-issue.service';
 import {ActivatedRoute, NavigationEnd, NavigationStart, Router} from '@angular/router';
 import {LoaderService} from '../comman/loader/loader.service';
+import {isSuccess} from '@angular/http/src/http_utils';
 
 @Component({
   selector: 'app-ds-open-issue',
@@ -54,6 +55,7 @@ export class OpenIssueComponent implements OnInit, OnDestroy{
   editImg: string;
   saveImg: string;
   cancelImg: string;
+  deleteSub: any;
   ngOnInit() {
     this.route.params.subscribe( params => {
       this.issueId = params['issueId'];
@@ -182,6 +184,7 @@ export class OpenIssueComponent implements OnInit, OnDestroy{
     this.labelsSubscription.unsubscribe();
     this.assigneeSubscription.unsubscribe();
     this.milestoneSubscription.unsubscribe();
+    this.deleteSub.unsubscribe();
   }
 
   getIssueDetail(issueId: number) {
@@ -243,5 +246,17 @@ export class OpenIssueComponent implements OnInit, OnDestroy{
     this.openIssueForm = this.refIssueForm;
     // logic to refill form to original state
     this.formMode = FORM_MODE.DISPLAY;
+  }
+
+  deleteFn() {
+    this._loaderService.showLoader.emit(true);
+    this._openIssueService.deleteIssue$(this.issueId).subscribe(
+      success => {
+        this._loaderService.showLoader.emit(false);
+      },
+      error => {
+        console.log(error);
+      }
+    );
   }
 }

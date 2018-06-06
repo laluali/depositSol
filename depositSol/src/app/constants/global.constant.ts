@@ -35,7 +35,8 @@ export const backendURL = {
   'labels': 'https://api.github.com/repos/' + REPO + '/labels?per_page=1000&type=owner',
   'openIssues': 'https://api.github.com/search/issues?q=',
   'closedIssues': 'https://api.github.com/search/issues?q=',
-  'milestones': 'https://api.github.com/repos/' + REPO + '/milestones'
+  'milestones': 'https://api.github.com/repos/' + REPO + '/milestones',
+  'delete': 'https://api.github.com/repos/' + REPO + '/issues/'
 };
 
 export const repoSort = {
