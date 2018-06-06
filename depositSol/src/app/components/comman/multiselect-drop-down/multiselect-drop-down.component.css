@@ -8,7 +8,6 @@
   height: auto;
   max-height: 150px;
   overflow-y: auto;
-  width: 100%;
   padding: 0 10px;
 }
 .selected-sugg > li{
