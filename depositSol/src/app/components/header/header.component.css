@@ -1,5 +1,9 @@
 @import "../../app.component.css";
 
+a:active,  a:visited,  a:hover,  a,  a:link:visited,  a:visited:active {
+  text-decoration: none;
+  color: white;
+}
 
 .hide{
   display: none;
