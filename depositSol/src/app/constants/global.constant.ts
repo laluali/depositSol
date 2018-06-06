@@ -1,5 +1,5 @@
 
-export const REPO = 'angular/angular.js'; // angular/angular.js, laluali/depositSol
+export const REPO = 'laluali/depositSol'; // angular/angular.js, laluali/depositSol
 export const FORM_MODE = {
   'DISPLAY': 'DISPLAY',
   'EDIT': 'EDIT',
