@@ -56,6 +56,8 @@ export class OpenIssueComponent implements OnInit, OnDestroy{
   saveImg: string;
   cancelImg: string;
   deleteSub: any;
+  deleteSuccess: boolean;
+  catImg: string;
   ngOnInit() {
     this.route.params.subscribe( params => {
       this.issueId = params['issueId'];
@@ -68,6 +70,8 @@ export class OpenIssueComponent implements OnInit, OnDestroy{
     this.editImg = dsImage.edit;
     this.saveImg = dsImage.save;
     this.cancelImg = dsImage.cross;
+    this.catImg = dsImage.cat;
+    this.deleteSuccess = false;
     this.labelsSubscription = this._issueCardService.getAllLabels$(backendURL.labels).subscribe(
       success => {
         this.labelList = success;
@@ -250,10 +254,11 @@ export class OpenIssueComponent implements OnInit, OnDestroy{
 
   deleteFn() {
     this._loaderService.showLoader.emit(true);
-    this._openIssueService.deleteIssue$(this.issueId).subscribe(
-      success => {
+    this.deleteSub = this._openIssueService.deleteIssue$(this.issueId).subscribe(
+      (success) => {
         this._loaderService.showLoader.emit(false);
-        this.router.navigate(['home'])
+        this.router.navigate(['']);
+        this.deleteSuccess  = true;
       },
       error => {
         console.log(error);

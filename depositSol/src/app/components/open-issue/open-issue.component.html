@@ -96,6 +96,10 @@
     </div>
   </div>
   <div class="sec3">
-
+    <div *ngIf="deleteSuccess">
+      <img [src]="catImg" class="cat-img vertical-centre" alt="github" title="github">
+      <span>Looks like you are lost...</span>
+      <button class="form-submit">Home</button>
+    </div>
   </div>
 </div>

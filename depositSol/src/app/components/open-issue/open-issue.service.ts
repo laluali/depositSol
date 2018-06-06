@@ -51,7 +51,7 @@ export class OpenIssueService {
   deleteIssue$(issueId: number) {// :number
     return this._backendService.doDelete(backendURL.issues + '/' + issueId + '/lock')
       .map(
-        (res) =>  <IssueCard[]> res
+        (res: boolean) =>  {return true}
       )
       .catch(
         (error: any) => {
