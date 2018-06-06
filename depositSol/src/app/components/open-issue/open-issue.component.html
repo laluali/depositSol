@@ -37,7 +37,7 @@
           <div class="form-element">
             <span class="title">
               <label class="title-head">Label </label>
-              <ul *ngIf="formMode == 'DISPLAY'" class="tag-list">
+              <ul *ngIf="formMode == 'DISPLAY'" class="tag-list title-body">
                 <li *ngFor="let tag of labelsOnIssue">
                   <app-ds-tag [tagKey]="labelSearchKey" [showBorder]="true" [showColorBar]="true" [isImage]="false" [tag]="tag"></app-ds-tag>
                 </li>
@@ -45,7 +45,7 @@
               <div *ngIf="formMode == 'CREATE' || formMode == 'EDIT'">
                 <div class="form-input">
                   <app-ds-multiselect-drop-down (getFilteredList)="filteredLabels($event);" [searchKey]="labelSearchKey" [id]="labelId" [dropDownLabel]=""
-                                              [filteredList]="labelsOnIssue" [refreshResults]="true" [showBorder]="true" [selectList]="labelList" [showColorBar]="true"></app-ds-multiselect-drop-down>
+                                                [filteredList]="labelsOnIssue" [refreshResults]="true" [showBorder]="true" [selectList]="labelList" [showColorBar]="true"></app-ds-multiselect-drop-down>
                 </div>
               </div>
             </span>
@@ -54,7 +54,7 @@
           <div class="form-element">
             <span class="title">
               <label class="title-head">Assignee </label>
-              <ul *ngIf="formMode == 'DISPLAY'" class="tag-list">
+              <ul *ngIf="formMode == 'DISPLAY'" class="tag-list title-body">
                 <li *ngFor="let tag of assigneesOnIssue">
                 <app-ds-tag [tagKey]="assigneeSearchKey" [showBorder]="true" [showColorBar]="true" [isImage]="false" [tag]="tag"></app-ds-tag>
               </li>
@@ -62,7 +62,7 @@
               <div *ngIf="formMode == 'CREATE' || formMode == 'EDIT'">
                 <div class="form-input">
                   <app-ds-multiselect-drop-down *ngIf="assigneeList" (getFilteredList)="filteredAssingnee($event);" [searchKey]="assigneeSearchKey" [id]="assigneeId" [dropDownLabel]=""
-                                            [filteredList]="assigneesOnIssue" [refreshResults]="true" [selectList]="assigneeList" [showBorder]="false" [showColorBar]="false" [isImage]="true"></app-ds-multiselect-drop-down>
+                                                [filteredList]="assigneesOnIssue" [refreshResults]="true" [selectList]="assigneeList" [showBorder]="false" [showColorBar]="false" [isImage]="true"></app-ds-multiselect-drop-down>
 
                 </div>
               </div>
@@ -72,7 +72,7 @@
           <div class="form-element">
             <span class="title">
               <label class="title-head">Milestone </label>
-              <ul  *ngIf="formMode == 'DISPLAY'" class="tag-list">
+              <ul  *ngIf="formMode == 'DISPLAY'" class="tag-list title-body">
                 <span *ngFor="let tag of milestonesOnIssue">
                   <app-ds-tag [tagKey]="milestoneSearchKey" [showBorder]="true" [showColorBar]="true" [isImage]="false" [tag]="tag"></app-ds-tag>
                 </span>
@@ -80,7 +80,7 @@
               <div *ngIf="formMode == 'CREATE' || formMode == 'EDIT'">
                 <div class="form-input">
                   <app-ds-multiselect-drop-down *ngIf="milestoneList" (getFilteredList)="filteredMilestones($event);" [searchKey]="milestoneSearchKey" [id]="milestoneId" [dropDownLabel]=""
-                                              [filteredList]="milestonesOnIssue" [refreshResults]="true" [selectList]="milestoneList" [showBorder]="false" [showColorBar]="false" [isImage]="true"></app-ds-multiselect-drop-down>
+                                                [filteredList]="milestonesOnIssue" [refreshResults]="true" [selectList]="milestoneList" [showBorder]="false" [showColorBar]="false" [isImage]="true"></app-ds-multiselect-drop-down>
 
                 </div>
               </div>
